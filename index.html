@@ -356,6 +356,10 @@
       text-align: left; position: relative; overflow: hidden;
       display: flex; flex-direction: column; gap: 14px;
     }
+    /* FIX: extra top padding for cards with a badge, so badge never overlaps content */
+    .client-card.has-badge {
+      padding-top: 56px;
+    }
     .client-card::before {
       content: ''; position: absolute; top: 0; left: 0;
       width: 5px; height: 100%;
@@ -402,6 +406,7 @@
       gap: 5px;
       box-shadow: 0 3px 10px rgba(253, 203, 110, 0.4);
       text-transform: uppercase;
+      z-index: 2;
     }
     .pos-badge i { font-size: 0.7rem; }
 
@@ -627,7 +632,7 @@
               Where can I visit in person to buy your services?
               <i class="fas fa-chevron-down"></i>
             </div>
-            <div class="faq-answer">You can visit our authorized Point of Sale at <strong>Ghimire General tatha Dudh Dairy Pasal</strong>, located at Jeetpur-Simara-7, Jeetpur Tedha Road, Bara. Our friendly staff there can help you sign up for internet, IPTV, or CCTV services.</div>
+            <div class="faq-answer">You can visit our authorized Point of Sale at <strong>Ghimire General tatha Dudh Dairy Pasal</strong>, located at Jeetpur-Simara-7, Jeetpur Tedha Road, Bara. Our friendly staff there can help you sign up for internet or CCTV services.</div>
           </div>
 
           <div class="faq-item">
@@ -795,8 +800,8 @@
             </div>
           </div>
 
-          <!-- Client 3 — Ghimire General (Point of Sale) -->
-          <div class="client-card">
+          <!-- Client 3 — Ghimire General (Point of Sale) — FIXED -->
+          <div class="client-card has-badge">
             <span class="pos-badge"><i class="fas fa-store-alt"></i> Point of Sale</span>
             <div class="client-header">
               <div class="client-avatar"><i class="fas fa-cow"></i></div>
@@ -809,8 +814,8 @@
               </div>
             </div>
             <div class="client-services">
-              <span class="client-tag">General Store</span>
-              <span class="client-tag green">Dudh Dairy</span>
+              <span class="client-tag">CCTV</span>
+              <span class="client-tag green">Internet Service</span>
               <span class="client-tag outlet">
                 <i class="fas fa-store-alt"></i>Authorized Point of Sale
               </span>
