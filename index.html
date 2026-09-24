@@ -213,11 +213,37 @@
     }
     .contact-action:hover .action-arrow { color: var(--primary); transform: translateX(3px); }
 
+    /* ===== CONTACT INFO LINES ===== */
     .contact-info .info-line {
-      display: flex; align-items: center; gap: 12px;
+      display: flex; align-items: flex-start; gap: 12px;
       margin-bottom: 14px; font-size: 0.98rem;
     }
-    .contact-info .info-line i { color: var(--primary); font-size: 1.1rem; width: 22px; text-align: center; }
+    .contact-info .info-line > i {
+      color: var(--primary); font-size: 1.1rem;
+      width: 22px; text-align: center; margin-top: 3px; flex-shrink: 0;
+    }
+    .contact-info .info-line .info-text { display: flex; flex-direction: column; gap: 3px; }
+
+    /* Location link — styled as the business name, redirects to Maps */
+    .contact-info .location-link {
+      color: var(--text-dark);
+      font-weight: 600;
+      transition: var(--transition);
+    }
+    .contact-info .location-link:hover {
+      color: var(--primary);
+    }
+    .contact-info .maps-sublink {
+      font-size: 0.8rem;
+      color: var(--primary);
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: var(--transition);
+    }
+    .contact-info .maps-sublink:hover { text-decoration: underline; }
+    .contact-info .maps-sublink i { font-size: 0.65rem; }
 
     /* ===== SERVICE AREA ===== */
     .service-area-wrapper {
@@ -356,10 +382,7 @@
       text-align: left; position: relative; overflow: hidden;
       display: flex; flex-direction: column; gap: 14px;
     }
-    /* FIX: extra top padding for cards with a badge, so badge never overlaps content */
-    .client-card.has-badge {
-      padding-top: 56px;
-    }
+    .client-card.has-badge { padding-top: 56px; }
     .client-card::before {
       content: ''; position: absolute; top: 0; left: 0;
       width: 5px; height: 100%;
@@ -389,32 +412,20 @@
     }
     .client-tag.green { background: rgba(0, 184, 148, 0.1); color: var(--secondary); }
 
-    /* Point of Sale badge (top-right of card) */
     .pos-badge {
-      position: absolute;
-      top: 14px;
-      right: 14px;
+      position: absolute; top: 14px; right: 14px;
       background: linear-gradient(135deg, var(--accent), #f9b93b);
-      color: var(--text-dark);
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      padding: 5px 10px;
-      border-radius: 50px;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
+      color: var(--text-dark); font-size: 0.65rem; font-weight: 700;
+      letter-spacing: 0.5px; padding: 5px 10px; border-radius: 50px;
+      display: inline-flex; align-items: center; gap: 5px;
       box-shadow: 0 3px 10px rgba(253, 203, 110, 0.4);
-      text-transform: uppercase;
-      z-index: 2;
+      text-transform: uppercase; z-index: 2;
     }
     .pos-badge i { font-size: 0.7rem; }
 
-    /* Point of Sale tag (bottom of card) */
     .client-tag.outlet {
       background: linear-gradient(135deg, rgba(253, 203, 110, 0.25), rgba(249, 185, 59, 0.25));
-      color: #8a6300;
-      border: 1px solid rgba(253, 203, 110, 0.6);
+      color: #8a6300; border: 1px solid rgba(253, 203, 110, 0.6);
     }
     .client-tag.outlet i { margin-right: 4px; font-size: 0.7rem; }
 
@@ -768,7 +779,6 @@
         </div>
 
         <div class="clients-grid">
-          <!-- Client 1 -->
           <div class="client-card">
             <div class="client-header">
               <div class="client-avatar"><i class="fas fa-store"></i></div>
@@ -785,7 +795,6 @@
             </div>
           </div>
 
-          <!-- Client 2 -->
           <div class="client-card">
             <div class="client-header">
               <div class="client-avatar"><i class="fas fa-hotel"></i></div>
@@ -800,7 +809,6 @@
             </div>
           </div>
 
-          <!-- Client 3 — Ghimire General (Point of Sale) — FIXED -->
           <div class="client-card has-badge">
             <span class="pos-badge"><i class="fas fa-store-alt"></i> Point of Sale</span>
             <div class="client-header">
@@ -825,7 +833,6 @@
 
         <p style="margin-top: 35px; font-style: italic; text-align: center;">...and many more local businesses, homes, and offices across the region.</p>
 
-        <!-- ===== TESTIMONIALS ===== -->
         <section class="testimonials-section">
           <h2>What Our Clients Say</h2>
           <p>Real feedback from real customers in Bara.</p>
@@ -920,11 +927,11 @@
 
           <div class="service-area-map">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113870.21650472716!2d84.93398715966796!3d27.124736060366006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3993f0000000001%3A0x0!2sJeetpur%20Simara!5e0!3m2!1sen!2snp!4v1700000000000!5m2!1sen!2snp"
+              src="https://maps.google.com/maps?q=27.150722,84.968472&z=14&output=embed"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
-              title="Sajilo Digital Communication Service Area Map">
+              title="Sajilo Digital Communication Office Location">
             </iframe>
 
             <div class="map-legend">
@@ -963,7 +970,20 @@
 
           <div class="contact-info">
             <h2>Get In Touch</h2>
-            <p class="info-line"><i class="fas fa-map-marker-alt"></i> 5X29+5F Gadhimai, Madhesh Province</p>
+
+            <!-- ===== LOCATION (UPDATED) ===== -->
+            <p class="info-line">
+              <i class="fas fa-map-marker-alt"></i>
+              <span class="info-text">
+                <a href="https://maps.google.com/?q=27.150722,84.968472" target="_blank" rel="noopener" class="location-link">
+                  Sajilo Digital Communication
+                </a>
+                <a href="https://maps.google.com/?q=27.150722,84.968472" target="_blank" rel="noopener" class="maps-sublink">
+                  <i class="fas fa-external-link-alt"></i> View on Google Maps
+                </a>
+              </span>
+            </p>
+
             <p class="info-line"><i class="fas fa-envelope"></i> sdc2081@gmail.com</p>
 
             <div class="contact-action-list">
@@ -1079,14 +1099,15 @@
 
     // ============================================================
     // CHECK MY ADDRESS — GEOLOCATION FEATURE
+    // Office: 27.150722, 84.968472
     // ============================================================
     const SERVICE_ZONE = {
       minLat: 26.95,
-      maxLat: 27.25,
-      minLng: 84.85,
+      maxLat: 27.35,
+      minLng: 84.80,
       maxLng: 85.15,
-      centerLat: 27.1247,
-      centerLng: 84.9900,
+      centerLat: 27.150722,
+      centerLng: 84.968472,
       maxDistanceKm: 25
     };
 
@@ -1141,7 +1162,7 @@
       if (inBoundingBox && distanceKm <= SERVICE_ZONE.maxDistanceKm) {
         showResult('success',
           'Great News — You\'re Covered! 🎉',
-          `Your location (${distanceKm.toFixed(1)} km from our hub) is inside our service area. We can install internet, IPTV, or CCTV at your address. Tap below to request a free site visit.`,
+          `Your location (${distanceKm.toFixed(1)} km from our office) is inside our service area. We can install internet, IPTV, or CCTV at your address. Tap below to request a free site visit.`,
           coordsHtml, false,
           { label: 'Request Free Site Visit', url: '#', onclick: "switchTab('contact', event)" }
         );
@@ -1149,7 +1170,7 @@
         if (distanceKm <= SERVICE_ZONE.maxDistanceKm + 10) {
           showResult('warning',
             'Just Outside Our Zone',
-            `You're about ${distanceKm.toFixed(1)} km from our nearest hub. You may be at the edge of coverage — contact us and we'll check manually.`,
+            `You're about ${distanceKm.toFixed(1)} km from our office. You may be at the edge of coverage — contact us and we'll check manually.`,
             coordsHtml, false,
             { label: 'Ask About My Area',
               url: 'https://wa.me/9779802596081?text=Hello%20Sajilo%20Digital%2C%20I%20am%20located%20just%20outside%20your%20service%20area.%20Can%20you%20check%20if%20you%20can%20cover%20me%3F',
@@ -1158,7 +1179,7 @@
         } else {
           showResult('warning',
             'Outside Our Current Coverage',
-            `Your location is approximately ${distanceKm.toFixed(1)} km from our hub — currently outside our service zone. We're expanding, so reach out and we'll let you know when we arrive.`,
+            `Your location is approximately ${distanceKm.toFixed(1)} km from our office — currently outside our service zone. We're expanding, so reach out and we'll let you know when we arrive.`,
             coordsHtml, false,
             { label: 'Notify Me When Available',
               url: 'https://wa.me/9779802596081?text=Hello%20Sajilo%20Digital%2C%20I%20am%20outside%20your%20coverage%20area.%20Please%20notify%20me%20when%20service%20is%20available%20in%20my%20area.',
