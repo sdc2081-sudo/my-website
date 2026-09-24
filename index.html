@@ -540,6 +540,92 @@
       100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
     }
 
+    /* ===== CLIENTS SERVED SECTION ===== */
+    .clients-section {
+      margin-top: 60px;
+      padding: 50px 30px;
+      background: var(--bg-white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0, 168, 255, 0.05);
+      text-align: center;
+    }
+
+    .clients-section h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: var(--text-dark);
+    }
+
+    .clients-section > p {
+      max-width: 600px;
+      margin: 0 auto 35px;
+      color: var(--text-body);
+    }
+
+    .clients-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .client-card {
+      background: var(--bg-light);
+      padding: 30px 20px;
+      border-radius: var(--radius);
+      transition: var(--transition);
+      border: 1px solid rgba(0, 168, 255, 0.08);
+      text-align: center;
+    }
+
+    .client-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+      border-color: rgba(0, 168, 255, 0.2);
+    }
+
+    .client-card i {
+      font-size: 2rem;
+      color: var(--secondary);
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    .client-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: var(--text-dark);
+    }
+
+    .client-card p {
+      font-size: 0.92rem;
+      color: var(--text-body);
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .client-card p i {
+      font-size: 0.85rem;
+      color: var(--primary);
+      margin: 0;
+      display: inline;
+    }
+
+    .client-tag {
+      display: inline-block;
+      background: rgba(0, 168, 255, 0.12);
+      color: var(--primary);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 4px 14px;
+      border-radius: 50px;
+      margin-top: 10px;
+    }
+
     /* ===== RESPONSIVE ===== */
     @media (max-width: 992px) {
       .grid-4 {
@@ -602,6 +688,12 @@
         bottom: 20px;
         right: 20px;
       }
+      .clients-grid {
+        grid-template-columns: 1fr;
+      }
+      .clients-section {
+        padding: 30px 20px;
+      }
     }
   </style>
 </head>
@@ -620,6 +712,7 @@
         <li><a href="#" class="tab-link" data-tab="services" onclick="switchTab('services', event)">Services</a></li>
         <li><a href="#" class="tab-link" data-tab="why-us" onclick="switchTab('why-us', event)">Why Us</a></li>
         <li><a href="#" class="tab-link" data-tab="about" onclick="switchTab('about', event)">About</a></li>
+        <li><a href="#" class="tab-link" data-tab="clients" onclick="switchTab('clients', event)">Clients</a></li>
         <li><a href="#" class="tab-link" data-tab="service-area" onclick="switchTab('service-area', event)">Service Area</a></li>
         <li><a href="#" class="tab-link" data-tab="contact" onclick="switchTab('contact', event)">Contact</a></li>
       </ul>
@@ -641,6 +734,30 @@
             <div class="hero-buttons">
               <a href="#" class="btn btn-accent" onclick="switchTab('contact', event)">Get Internet Today</a>
               <a href="#" class="btn btn-outline" onclick="switchTab('contact', event)" style="color: white; border-color: white;">Request a Quote</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== CLIENTS SERVED (HOME TAB) ===== -->
+        <section class="clients-section">
+          <h2>Clients We Serve</h2>
+          <p>Trusted by leading businesses and hotels across Bara. Here are some of the valued clients who rely on Sajilo Digital Communication for their connectivity and security needs.</p>
+          <div class="clients-grid">
+            <!-- Client 1: Anmol Sweets -->
+            <div class="client-card">
+              <i class="fas fa-store"></i>
+              <h3>Anmol Sweets</h3>
+              <p><i class="fas fa-map-marker-alt"></i> Jeetpur, Bara</p>
+              <p><i class="fas fa-building"></i> Outlet &amp; Factory</p>
+              <span class="client-tag">CCTV &amp; Networking</span>
+            </div>
+            <!-- Client 2: Binod Line Hotel -->
+            <div class="client-card">
+              <i class="fas fa-hotel"></i>
+              <h3>Binod Line Hotel</h3>
+              <p><i class="fas fa-map-marker-alt"></i> Jeetpur, Bara</p>
+              <p><i class="fas fa-wifi"></i> High-Speed Internet &amp; CCTV</p>
+              <span class="client-tag">Internet &amp; Security</span>
             </div>
           </div>
         </section>
@@ -738,7 +855,35 @@
         </div>
       </div>
 
-      <!-- TAB 5: SERVICE AREA -->
+      <!-- TAB 5: CLIENTS (Dedicated tab) -->
+      <div id="clients" class="tab-content">
+        <section class="clients-section">
+          <h2>Our Valued Clients</h2>
+          <p>We are proud to serve businesses and institutions across Bara and beyond. Here are some of the organizations that trust us for their digital communication needs.</p>
+          <div class="clients-grid">
+            <!-- Client 1: Anmol Sweets -->
+            <div class="client-card">
+              <i class="fas fa-store"></i>
+              <h3>Anmol Sweets</h3>
+              <p><i class="fas fa-map-marker-alt"></i> Jeetpur, Bara</p>
+              <p><i class="fas fa-building"></i> Outlet &amp; Factory</p>
+              <span class="client-tag">CCTV &amp; Networking</span>
+            </div>
+            <!-- Client 2: Binod Line Hotel -->
+            <div class="client-card">
+              <i class="fas fa-hotel"></i>
+              <h3>Binod Line Hotel</h3>
+              <p><i class="fas fa-map-marker-alt"></i> Jeetpur, Bara</p>
+              <p><i class="fas fa-wifi"></i> High-Speed Internet &amp; CCTV</p>
+              <span class="client-tag">Internet &amp; Security</span>
+            </div>
+          </div>
+          <!-- Additional note about more clients -->
+          <p style="margin-top: 35px; font-style: italic; color: var(--text-body);">...and many more local businesses, homes, and offices across the region.</p>
+        </section>
+      </div>
+
+      <!-- TAB 6: SERVICE AREA -->
       <div id="service-area" class="tab-content">
         <div class="service-area">
           <h2>Proudly Serving Bara & Beyond</h2>
@@ -753,7 +898,7 @@
         </div>
       </div>
 
-      <!-- TAB 6: CONTACT -->
+      <!-- TAB 7: CONTACT -->
       <div id="contact" class="tab-content">
         <div class="contact-grid">
           <div class="contact-form">
