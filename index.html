@@ -6,21 +6,22 @@
   <title>Sajilo Digital Communication | Internet, CCTV & Networking in Bara, Nepal</title>
   <meta name="description" content="Sajilo Digital Communication provides high-speed internet, CCTV installation, internal & external networking in Jeetpur-Simara, Bara, Nepal. Call +977 9802596081.">
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
+    /* ===== FRESH AIR COLOR PALETTE ===== */
     :root {
-      --primary: #0056b3;
-      --secondary: #1e293b;
-      --accent: #f59e0b;
-      --bg-light: #f8fafc;
-      --bg-blue-light: #e0f2fe;
-      --text-dark: #0f172a;
-      --text-body: #334155;
-      --white: #ffffff;
-      --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      --radius: 12px;
+      --primary: #00A8FF;       /* Fresh Sky Blue */
+      --secondary: #00B894;     /* Fresh Mint Green */
+      --accent: #FDCB6E;        /* Soft Sun Yellow (for highlights/CTAs) */
+      --bg-light: #F4F9F9;      /* Very light airy blue-gray */
+      --bg-white: #FFFFFF;      /* Crisp White */
+      --text-dark: #2C3E50;     /* Deep Slate */
+      --text-body: #4A5568;     /* Soft Charcoal */
+      --shadow: 0 4px 20px rgba(0, 168, 255, 0.08);
+      --shadow-hover: 0 10px 30px rgba(0, 168, 255, 0.15);
+      --radius: 16px;
       --transition: all 0.3s ease;
     }
 
@@ -37,8 +38,11 @@
     body {
       font-family: 'Inter', sans-serif;
       color: var(--text-body);
-      background: var(--white);
+      background: var(--bg-light);
       line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     h1, h2, h3, h4 {
@@ -62,6 +66,7 @@
       padding: 0 20px;
     }
 
+    /* ===== BUTTONS ===== */
     .btn {
       display: inline-block;
       padding: 12px 28px;
@@ -76,59 +81,64 @@
 
     .btn-primary {
       background: var(--primary);
-      color: var(--white);
+      color: var(--bg-white);
+      box-shadow: 0 4px 15px rgba(0, 168, 255, 0.3);
     }
 
     .btn-primary:hover {
-      background: #004494;
+      background: #0097e6;
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 86, 179, 0.35);
+      box-shadow: 0 6px 20px rgba(0, 168, 255, 0.4);
     }
 
     .btn-accent {
       background: var(--accent);
-      color: var(--secondary);
+      color: var(--text-dark);
+      box-shadow: 0 4px 15px rgba(253, 203, 110, 0.4);
     }
 
     .btn-accent:hover {
-      background: #d97706;
-      color: var(--white);
+      background: #f9b93b;
       transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(253, 203, 110, 0.5);
     }
 
     .btn-outline {
       background: transparent;
-      color: var(--white);
-      border: 2px solid var(--white);
+      color: var(--text-dark);
+      border: 2px solid var(--text-dark);
     }
 
     .btn-outline:hover {
-      background: var(--white);
-      color: var(--primary);
+      background: var(--text-dark);
+      color: var(--bg-white);
       transform: translateY(-2px);
     }
 
     .btn-whatsapp {
       background: #25D366;
-      color: var(--white);
+      color: var(--bg-white);
       display: inline-flex;
       align-items: center;
       gap: 10px;
       margin-top: 15px;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
     }
 
     .btn-whatsapp:hover {
       background: #1ebe5d;
       transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
     }
 
-    /* ===== HEADER ===== */
+    /* ===== HEADER & TABS ===== */
     .header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: var(--white);
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
       padding: 10px 0;
     }
 
@@ -147,19 +157,38 @@
 
     .nav-links {
       display: flex;
-      gap: 28px;
+      gap: 8px;
       align-items: center;
+      background: var(--bg-light);
+      padding: 6px;
+      border-radius: 50px;
+      overflow-x: auto;
+      white-space: nowrap;
     }
 
-    .nav-links a {
+    .nav-links::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nav-links li a {
       font-weight: 500;
       font-size: 0.95rem;
-      color: var(--secondary);
+      color: var(--text-body);
       transition: var(--transition);
+      padding: 8px 18px;
+      border-radius: 50px;
+      display: block;
     }
 
-    .nav-links a:hover {
+    .nav-links li a:hover {
       color: var(--primary);
+      background: rgba(0, 168, 255, 0.08);
+    }
+
+    .nav-links li a.active {
+      background: var(--primary);
+      color: var(--bg-white);
+      box-shadow: 0 2px 10px rgba(0, 168, 255, 0.2);
     }
 
     .nav-cta {
@@ -167,22 +196,38 @@
       font-size: 0.9rem;
     }
 
-    .hamburger {
-      display: none;
-      font-size: 1.8rem;
-      color: var(--secondary);
-      cursor: pointer;
+    /* ===== TAB CONTENT SYSTEM ===== */
+    .main-content {
+      flex: 1;
+      padding: 40px 0 80px;
     }
 
-    /* ===== HERO ===== */
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.4s ease forwards;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== HERO SECTION ===== */
     .hero {
-      min-height: 90vh;
+      min-height: 70vh;
       display: flex;
       align-items: center;
-      background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)),
+      background: linear-gradient(rgba(44, 62, 80, 0.6), rgba(44, 62, 80, 0.6)),
                   url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
-      color: var(--white);
-      padding: 80px 0;
+      color: var(--bg-white);
+      padding: 60px 40px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 30px;
     }
 
     .hero-content {
@@ -191,7 +236,7 @@
 
     .hero h1 {
       font-size: clamp(2.2rem, 5vw, 3.8rem);
-      color: var(--white);
+      color: var(--bg-white);
       margin-bottom: 20px;
     }
 
@@ -200,6 +245,7 @@
       margin-bottom: 35px;
       opacity: 0.95;
       max-width: 650px;
+      color: #E2E8F0;
     }
 
     .hero-buttons {
@@ -209,33 +255,31 @@
     }
 
     /* ===== TRUST BADGES ===== */
-    .trust-badges {
-      padding: 70px 0;
-      background: var(--white);
-    }
-
     .grid-4 {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 30px;
+      gap: 25px;
     }
 
     .badge {
       text-align: center;
-      padding: 30px 20px;
+      padding: 35px 20px;
       border-radius: var(--radius);
       transition: var(--transition);
-      background: var(--white);
+      background: var(--bg-white);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0, 168, 255, 0.05);
     }
 
     .badge:hover {
-      box-shadow: var(--shadow);
+      box-shadow: var(--shadow-hover);
       transform: translateY(-5px);
+      border-color: rgba(0, 168, 255, 0.2);
     }
 
     .badge i {
       font-size: 2.2rem;
-      color: var(--primary);
+      color: var(--secondary);
       margin-bottom: 15px;
     }
 
@@ -250,18 +294,6 @@
     }
 
     /* ===== SERVICES ===== */
-    .services {
-      padding: 80px 0;
-      background: var(--bg-light);
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 2.2rem;
-      margin-bottom: 50px;
-      color: var(--secondary);
-    }
-
     .services-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -269,17 +301,18 @@
     }
 
     .service-card {
-      background: var(--white);
+      background: var(--bg-white);
       padding: 35px 30px;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       transition: var(--transition);
-      border-top: 4px solid var(--primary);
+      border-top: 4px solid var(--secondary);
+      border: 1px solid rgba(0, 168, 255, 0.05);
     }
 
     .service-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+      box-shadow: var(--shadow-hover);
     }
 
     .service-card i {
@@ -312,7 +345,7 @@
 
     .service-card ul li i {
       font-size: 0.9rem;
-      color: #10b981;
+      color: var(--secondary);
       margin: 0;
     }
 
@@ -322,11 +355,6 @@
     }
 
     /* ===== ABOUT ===== */
-    .about {
-      padding: 80px 0;
-      background: var(--white);
-    }
-
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -353,9 +381,12 @@
 
     /* ===== SERVICE AREA ===== */
     .service-area {
-      padding: 80px 0;
-      background: var(--bg-blue-light);
+      padding: 60px 40px;
+      background: var(--bg-white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
       text-align: center;
+      border: 1px solid rgba(0, 168, 255, 0.05);
     }
 
     .service-area h2 {
@@ -363,7 +394,7 @@
       margin-bottom: 15px;
     }
 
-    .service-area > .container > p {
+    .service-area > p {
       max-width: 700px;
       margin: 0 auto 30px;
     }
@@ -380,11 +411,11 @@
       align-items: center;
       gap: 8px;
       font-weight: 600;
-      color: var(--secondary);
-      background: var(--white);
+      color: var(--text-dark);
+      background: var(--bg-light);
       padding: 10px 22px;
       border-radius: 50px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
     }
 
     .area-list li i {
@@ -392,15 +423,18 @@
     }
 
     /* ===== CONTACT ===== */
-    .contact {
-      padding: 80px 0;
-      background: var(--white);
-    }
-
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 60px;
+    }
+
+    .contact-form, .contact-info {
+      background: var(--bg-white);
+      padding: 40px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0, 168, 255, 0.05);
     }
 
     .contact-form h2,
@@ -421,13 +455,15 @@
       font-size: 0.95rem;
       outline: none;
       transition: var(--transition);
+      background: var(--bg-light);
     }
 
     .contact-form input:focus,
     .contact-form select:focus,
     .contact-form textarea:focus {
       border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.15);
+      box-shadow: 0 0 0 3px rgba(0, 168, 255, 0.15);
+      background: var(--bg-white);
     }
 
     .contact-form button {
@@ -454,21 +490,23 @@
 
     /* ===== FOOTER ===== */
     .footer {
-      background: var(--secondary);
-      color: var(--white);
+      background: var(--text-dark);
+      color: var(--bg-white);
       text-align: center;
       padding: 30px 0;
       font-size: 0.9rem;
+      margin-top: auto;
     }
 
     .footer p {
-      opacity: 0.85;
+      opacity: 0.8;
     }
 
     .footer p:last-child {
       margin-top: 6px;
       font-weight: 500;
       opacity: 1;
+      color: var(--accent);
     }
 
     /* ===== FLOATING WHATSAPP ===== */
@@ -477,7 +515,7 @@
       bottom: 25px;
       right: 25px;
       background: #25D366;
-      color: var(--white);
+      color: var(--bg-white);
       width: 60px;
       height: 60px;
       border-radius: 50%;
@@ -518,34 +556,31 @@
       .about-image img {
         height: 300px;
       }
+      .contact-form, .contact-info {
+        padding: 25px;
+      }
     }
 
     @media (max-width: 768px) {
+      .nav-container {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .logo {
+        margin-bottom: 10px;
+      }
       .nav-links {
-        display: none;
-        position: absolute;
-        top: 75px;
-        left: 0;
+        order: 3;
         width: 100%;
-        background: var(--white);
-        flex-direction: column;
-        padding: 25px 20px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-        gap: 20px;
-        border-top: 1px solid #e2e8f0;
-      }
-      .nav-links.active {
-        display: flex;
-      }
-      .hamburger {
-        display: block;
+        justify-content: flex-start;
+        padding: 5px;
       }
       .nav-cta {
         display: none;
       }
       .hero {
-        min-height: 80vh;
-        padding: 60px 0;
+        padding: 40px 20px;
+        min-height: 60vh;
       }
       .hero-buttons {
         flex-direction: column;
@@ -572,189 +607,188 @@
 </head>
 <body>
 
-  <!-- ===== HEADER ===== -->
+  <!-- ===== HEADER & TAB NAVIGATION ===== -->
   <header class="header">
     <div class="container nav-container">
-      <a href="#" class="logo">
+      <a href="#" class="logo" onclick="switchTab('home')">
         <!-- Place logo1.jpeg in the same folder as this file -->
         <img src="logo1.jpeg" alt="Sajilo Digital Communication Logo">
       </a>
-      <nav>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#why-us">Why Us</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#service-area">Service Area</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <a href="#contact" class="btn btn-primary nav-cta">Get Connected</a>
-      <div class="hamburger" id="hamburger">
-        <i class="fas fa-bars"></i>
-      </div>
+      
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#" class="tab-link active" data-tab="home" onclick="switchTab('home', event)">Home</a></li>
+        <li><a href="#" class="tab-link" data-tab="services" onclick="switchTab('services', event)">Services</a></li>
+        <li><a href="#" class="tab-link" data-tab="why-us" onclick="switchTab('why-us', event)">Why Us</a></li>
+        <li><a href="#" class="tab-link" data-tab="about" onclick="switchTab('about', event)">About</a></li>
+        <li><a href="#" class="tab-link" data-tab="service-area" onclick="switchTab('service-area', event)">Service Area</a></li>
+        <li><a href="#" class="tab-link" data-tab="contact" onclick="switchTab('contact', event)">Contact</a></li>
+      </ul>
+
+      <a href="#" class="btn btn-primary nav-cta" onclick="switchTab('contact', event)">Get Connected</a>
     </div>
   </header>
 
-  <!-- ===== HERO ===== -->
-  <section id="home" class="hero">
-    <div class="container hero-content">
-      <h1>Fast. Secure. Connected.</h1>
-      <p>Bara’s trusted partner for High-Speed Fiber Internet and Advanced Security Systems. We bring reliable connectivity to your home and business in Jeetpur-Simara and beyond.</p>
-      <div class="hero-buttons">
-        <a href="#contact" class="btn btn-accent">Get Internet Today</a>
-        <a href="#contact" class="btn btn-outline">Request a Quote</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== WHY CHOOSE US ===== -->
-  <section id="why-us" class="trust-badges">
-    <div class="container grid-4">
-      <div class="badge">
-        <i class="fas fa-map-marker-alt"></i>
-        <h3>Fast Local Support</h3>
-        <p>We are based in Bara. When you have an issue, we are minutes away, not hours.</p>
-      </div>
-      <div class="badge">
-        <i class="fas fa-certificate"></i>
-        <h3>Certified Technicians</h3>
-        <p>Our team is trained in fiber splicing, networking, and CCTV installation.</p>
-      </div>
-      <div class="badge">
-        <i class="fas fa-tachometer-alt"></i>
-        <h3>High-Speed Fiber</h3>
-        <p>Experience uninterrupted streaming, gaming, and business operations.</p>
-      </div>
-      <div class="badge">
-        <i class="fas fa-clock"></i>
-        <h3>24/7 Service Guarantee</h3>
-        <p>We monitor our network around the clock so you stay connected.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SERVICES ===== -->
-  <section id="services" class="services">
+  <!-- ===== MAIN TABBED CONTENT ===== -->
+  <main class="main-content">
     <div class="container">
-      <h2 class="section-title">Our Core Solutions</h2>
-      <div class="services-grid">
-        <!-- Service 1 -->
-        <div class="service-card">
-          <i class="fas fa-wifi"></i>
-          <h3>High-Speed Internet Services</h3>
-          <p>Tired of buffering? We provide reliable internet reseller services tailored for homes and businesses in Nepal.</p>
-          <ul>
-            <li><i class="fas fa-check-circle"></i> Home & Enterprise Plans</li>
-            <li><i class="fas fa-check-circle"></i> Unlimited Data Options</li>
-            <li><i class="fas fa-check-circle"></i> 99.9% Uptime Reliability</li>
-          </ul>
-          <a href="#contact" class="btn btn-primary">View Plans</a>
-        </div>
-        <!-- Service 2 -->
-        <div class="service-card">
-          <i class="fas fa-video"></i>
-          <h3>CCTV & Security Systems</h3>
-          <p>Protect what matters most. We supply, install, and maintain HD/IP camera systems with remote viewing capabilities.</p>
-          <ul>
-            <li><i class="fas fa-check-circle"></i> HD & IP Camera Setup</li>
-            <li><i class="fas fa-check-circle"></i> Mobile Remote Viewing</li>
-            <li><i class="fas fa-check-circle"></i> Routine Maintenance & Repair</li>
-          </ul>
-          <a href="#contact" class="btn btn-primary">Secure My Property</a>
-        </div>
-        <!-- Service 3 -->
-        <div class="service-card">
-          <i class="fas fa-network-wired"></i>
-          <h3>Internal Networking</h3>
-          <p>Optimize your office workflow. We design and set up seamless internal networks for maximum productivity.</p>
-          <ul>
-            <li><i class="fas fa-check-circle"></i> Office LAN Setup</li>
-            <li><i class="fas fa-check-circle"></i> Wi-Fi Routing & Configuration</li>
-            <li><i class="fas fa-check-circle"></i> Structured Cabling Solutions</li>
-          </ul>
-          <a href="#contact" class="btn btn-primary">Optimize Office</a>
-        </div>
-        <!-- Service 4 -->
-        <div class="service-card">
-          <i class="fas fa-broadcast-tower"></i>
-          <h3>External Networking</h3>
-          <p>Connecting distances. Expert fiber optic solutions for long-distance data transmission.</p>
-          <ul>
-            <li><i class="fas fa-check-circle"></i> Fiber Optic Cable Splicing</li>
-            <li><i class="fas fa-check-circle"></i> Long-Distance Fiber Laying</li>
-            <li><i class="fas fa-check-circle"></i> Network Backbone Setup</li>
-          </ul>
-          <a href="#contact" class="btn btn-primary">Consult Expert</a>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ===== ABOUT ===== -->
-  <section id="about" class="about">
-    <div class="container about-grid">
-      <div class="about-text">
-        <h2>Your Local Technology Partner</h2>
-        <p>Sajilo Digital Communication was founded with a simple mission: to simplify connectivity and security for the people of Bara and surrounding regions. Located in Jeetpur-Simara, we understand the local challenges of connectivity better than anyone else.</p>
-        <p>Whether you are a homeowner looking for secure CCTV or a business requiring a robust fiber backbone, we bridge the gap between you and the technology you need. We don't just sell services; we build long-term relationships based on trust, quality, and rapid service.</p>
+      <!-- TAB 1: HOME -->
+      <div id="home" class="tab-content active">
+        <section class="hero">
+          <div class="hero-content">
+            <h1>Fast. Secure. Connected.</h1>
+            <p>Bara’s trusted partner for High-Speed Fiber Internet and Advanced Security Systems. We bring reliable connectivity to your home and business in Jeetpur-Simara and beyond.</p>
+            <div class="hero-buttons">
+              <a href="#" class="btn btn-accent" onclick="switchTab('contact', event)">Get Internet Today</a>
+              <a href="#" class="btn btn-outline" onclick="switchTab('contact', event)" style="color: white; border-color: white;">Request a Quote</a>
+            </div>
+          </div>
+        </section>
       </div>
-      <div class="about-image">
-        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80" alt="Technician working on networking equipment">
-      </div>
-    </div>
-  </section>
 
-  <!-- ===== SERVICE AREA ===== -->
-  <section id="service-area" class="service-area">
-    <div class="container">
-      <h2>Proudly Serving Bara & Beyond</h2>
-      <p>Our network covers key areas in and around the region. We provide rapid response and high-quality installation services in:</p>
-      <ul class="area-list">
-        <li><i class="fas fa-map-pin"></i> Jeetpur-Simara</li>
-        <li><i class="fas fa-map-pin"></i> Bajani</li>
-        <li><i class="fas fa-map-pin"></i> Kalaiya</li>
-        <li><i class="fas fa-map-pin"></i> Bara District</li>
-        <li><i class="fas fa-map-pin"></i> Surrounding Commercial Hubs</li>
-      </ul>
-    </div>
-  </section>
+      <!-- TAB 2: SERVICES -->
+      <div id="services" class="tab-content">
+        <h2 class="section-title" style="text-align: center; margin-bottom: 40px; font-size: 2.2rem;">Our Core Solutions</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <i class="fas fa-wifi"></i>
+            <h3>High-Speed Internet Services</h3>
+            <p>Tired of buffering? We provide reliable internet reseller services tailored for homes and businesses in Nepal.</p>
+            <ul>
+              <li><i class="fas fa-check-circle"></i> Home & Enterprise Plans</li>
+              <li><i class="fas fa-check-circle"></i> Unlimited Data Options</li>
+              <li><i class="fas fa-check-circle"></i> 99.9% Uptime Reliability</li>
+            </ul>
+            <a href="#" class="btn btn-primary" onclick="switchTab('contact', event)">View Plans</a>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-video"></i>
+            <h3>CCTV & Security Systems</h3>
+            <p>Protect what matters most. We supply, install, and maintain HD/IP camera systems with remote viewing capabilities.</p>
+            <ul>
+              <li><i class="fas fa-check-circle"></i> HD & IP Camera Setup</li>
+              <li><i class="fas fa-check-circle"></i> Mobile Remote Viewing</li>
+              <li><i class="fas fa-check-circle"></i> Routine Maintenance & Repair</li>
+            </ul>
+            <a href="#" class="btn btn-primary" onclick="switchTab('contact', event)">Secure My Property</a>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-network-wired"></i>
+            <h3>Internal Networking</h3>
+            <p>Optimize your office workflow. We design and set up seamless internal networks for maximum productivity.</p>
+            <ul>
+              <li><i class="fas fa-check-circle"></i> Office LAN Setup</li>
+              <li><i class="fas fa-check-circle"></i> Wi-Fi Routing & Configuration</li>
+              <li><i class="fas fa-check-circle"></i> Structured Cabling Solutions</li>
+            </ul>
+            <a href="#" class="btn btn-primary" onclick="switchTab('contact', event)">Optimize Office</a>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-broadcast-tower"></i>
+            <h3>External Networking</h3>
+            <p>Connecting distances. Expert fiber optic solutions for long-distance data transmission.</p>
+            <ul>
+              <li><i class="fas fa-check-circle"></i> Fiber Optic Cable Splicing</li>
+              <li><i class="fas fa-check-circle"></i> Long-Distance Fiber Laying</li>
+              <li><i class="fas fa-check-circle"></i> Network Backbone Setup</li>
+            </ul>
+            <a href="#" class="btn btn-primary" onclick="switchTab('contact', event)">Consult Expert</a>
+          </div>
+        </div>
+      </div>
 
-  <!-- ===== CONTACT ===== -->
-  <section id="contact" class="contact">
-    <div class="container contact-grid">
-      <!-- Form -->
-      <div class="contact-form">
-        <h2>Request a Service</h2>
-        <form action="https://formsubmit.co/sdc2081@gmail.com" method="POST">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_subject" value="New Service Request from SDC Website">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="tel" name="phone" placeholder="Phone Number" required>
-          <select name="service" required>
-            <option value="">Select Service</option>
-            <option value="High-Speed Internet">High-Speed Internet</option>
-            <option value="CCTV & Security Systems">CCTV & Security Systems</option>
-            <option value="Internal Networking">Internal Networking</option>
-            <option value="External Networking">External Networking</option>
-            <option value="Other">Other</option>
-          </select>
-          <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-          <button type="submit" class="btn btn-primary">Send Request</button>
-        </form>
+      <!-- TAB 3: WHY US -->
+      <div id="why-us" class="tab-content">
+        <h2 class="section-title" style="text-align: center; margin-bottom: 40px; font-size: 2.2rem;">Why Choose Us</h2>
+        <div class="grid-4">
+          <div class="badge">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Fast Local Support</h3>
+            <p>We are based in Bara. When you have an issue, we are minutes away, not hours.</p>
+          </div>
+          <div class="badge">
+            <i class="fas fa-certificate"></i>
+            <h3>Certified Technicians</h3>
+            <p>Our team is trained in fiber splicing, networking, and CCTV installation.</p>
+          </div>
+          <div class="badge">
+            <i class="fas fa-tachometer-alt"></i>
+            <h3>High-Speed Fiber</h3>
+            <p>Experience uninterrupted streaming, gaming, and business operations.</p>
+          </div>
+          <div class="badge">
+            <i class="fas fa-clock"></i>
+            <h3>24/7 Service Guarantee</h3>
+            <p>We monitor our network around the clock so you stay connected.</p>
+          </div>
+        </div>
       </div>
-      <!-- Info -->
-      <div class="contact-info">
-        <h2>Get In Touch</h2>
-        <p><i class="fas fa-map-marker-alt"></i> Jeetpur-Simara-3, Bajani, Bara, Nepal</p>
-        <p><i class="fas fa-phone"></i> +977 9802596081</p>
-        <p><i class="fas fa-envelope"></i> sdc2081@gmail.com</p>
-        <a href="https://wa.me/9779802596081?text=Hello%20Sajilo%20Digital%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." class="btn btn-whatsapp" target="_blank">
-          <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-        </a>
+
+      <!-- TAB 4: ABOUT -->
+      <div id="about" class="tab-content">
+        <div class="about-grid">
+          <div class="about-text">
+            <h2>Your Local Technology Partner</h2>
+            <p>Sajilo Digital Communication was founded with a simple mission: to simplify connectivity and security for the people of Bara and surrounding regions. Located in Jeetpur-Simara, we understand the local challenges of connectivity better than anyone else.</p>
+            <p>Whether you are a homeowner looking for secure CCTV or a business requiring a robust fiber backbone, we bridge the gap between you and the technology you need. We don't just sell services; we build long-term relationships based on trust, quality, and rapid service.</p>
+          </div>
+          <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80" alt="Technician working on networking equipment">
+          </div>
+        </div>
       </div>
+
+      <!-- TAB 5: SERVICE AREA -->
+      <div id="service-area" class="tab-content">
+        <div class="service-area">
+          <h2>Proudly Serving Bara & Beyond</h2>
+          <p>Our network covers key areas in and around the region. We provide rapid response and high-quality installation services in:</p>
+          <ul class="area-list">
+            <li><i class="fas fa-map-pin"></i> Jeetpur-Simara</li>
+            <li><i class="fas fa-map-pin"></i> Bajani</li>
+            <li><i class="fas fa-map-pin"></i> Kalaiya</li>
+            <li><i class="fas fa-map-pin"></i> Bara District</li>
+            <li><i class="fas fa-map-pin"></i> Surrounding Commercial Hubs</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- TAB 6: CONTACT -->
+      <div id="contact" class="tab-content">
+        <div class="contact-grid">
+          <div class="contact-form">
+            <h2>Request a Service</h2>
+            <form action="https://formsubmit.co/sdc2081@gmail.com" method="POST">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_subject" value="New Service Request from SDC Website">
+              <input type="text" name="name" placeholder="Your Name" required>
+              <input type="tel" name="phone" placeholder="Phone Number" required>
+              <select name="service" required>
+                <option value="">Select Service</option>
+                <option value="High-Speed Internet">High-Speed Internet</option>
+                <option value="CCTV & Security Systems">CCTV & Security Systems</option>
+                <option value="Internal Networking">Internal Networking</option>
+                <option value="External Networking">External Networking</option>
+                <option value="Other">Other</option>
+              </select>
+              <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+              <button type="submit" class="btn btn-primary">Send Request</button>
+            </form>
+          </div>
+          <div class="contact-info">
+            <h2>Get In Touch</h2>
+            <p><i class="fas fa-map-marker-alt"></i> Jeetpur-Simara-3, Bajani, Bara, Nepal</p>
+            <p><i class="fas fa-phone"></i> +977 9802596081</p>
+            <p><i class="fas fa-envelope"></i> sdc2081@gmail.com</p>
+            <a href="https://wa.me/9779802596081?text=Hello%20Sajilo%20Digital%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." class="btn btn-whatsapp" target="_blank">
+              <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </main>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
@@ -769,21 +803,37 @@
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- ===== MOBILE MENU SCRIPT ===== -->
+  <!-- ===== TAB SWITCHING JAVASCRIPT ===== -->
   <script>
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
+    function switchTab(tabId, event) {
+      if (event) {
+        event.preventDefault();
+      }
 
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-
-    // Close menu when a link is clicked
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
+      // 1. Remove active class from all tab links
+      const tabLinks = document.querySelectorAll('.tab-link');
+      tabLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('data-tab') === tabId) {
+          link.classList.add('active');
+        }
       });
-    });
+
+      // 2. Hide all tab content
+      const tabContents = document.querySelectorAll('.tab-content');
+      tabContents.forEach(content => {
+        content.classList.remove('active');
+      });
+
+      // 3. Show the selected tab content
+      const selectedTab = document.getElementById(tabId);
+      if (selectedTab) {
+        selectedTab.classList.add('active');
+      }
+
+      // 4. Scroll to top of the main content area for better UX
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   </script>
 
 </body>
