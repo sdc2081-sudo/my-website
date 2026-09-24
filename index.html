@@ -3,37 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sajilo Digital Communication | Internet, CCTV & Networking in Bara, Nepal</title>
-  <meta name="description" content="Sajilo Digital Communication provides high-speed internet, CCTV installation, internal & external networking in Jeetpur-Simara, Bara, Nepal. Call +977 9802596081.">
-  <!-- Google Fonts -->
+  <title>Sajilo Digital Communication | Internet, IPTV, CCTV & Networking in Bara, Nepal</title>
+  <meta name="description" content="Sajilo Digital Communication provides high-speed internet, IPTV, CCTV installation, internal & external networking in Jeetpur-Simara, Bara, Nepal. Call +977 9802596081.">
+
+  <link rel="icon" type="image/png" href="logo1.jpeg">
+
+  <meta property="og:title" content="Sajilo Digital Communication | Internet, IPTV, CCTV & Networking">
+  <meta property="og:description" content="Bara's trusted partner for high-speed fiber internet, IPTV, CCTV, and networking.">
+  <meta property="og:image" content="logo1.jpeg">
+  <meta property="og:type" content="website">
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
-    /* ===== FRESH AIR COLOR PALETTE ===== */
     :root {
-      --primary: #00A8FF;       /* Fresh Sky Blue */
-      --secondary: #00B894;     /* Fresh Mint Green */
-      --accent: #FDCB6E;        /* Soft Sun Yellow (for highlights/CTAs) */
-      --bg-light: #F4F9F9;      /* Very light airy blue-gray */
-      --bg-white: #FFFFFF;      /* Crisp White */
-      --text-dark: #2C3E50;     /* Deep Slate */
-      --text-body: #4A5568;     /* Soft Charcoal */
+      --primary: #00A8FF;
+      --secondary: #00B894;
+      --accent: #FDCB6E;
+      --bg-light: #F4F9F9;
+      --bg-white: #FFFFFF;
+      --text-dark: #2C3E50;
+      --text-body: #4A5568;
       --shadow: 0 4px 20px rgba(0, 168, 255, 0.08);
       --shadow-hover: 0 10px 30px rgba(0, 168, 255, 0.15);
       --radius: 16px;
       --transition: all 0.3s ease;
+      --success: #00B894;
+      --danger: #E17055;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Inter', sans-serif;
@@ -45,26 +46,11 @@
       min-height: 100vh;
     }
 
-    h1, h2, h3, h4 {
-      font-family: 'Poppins', sans-serif;
-      color: var(--text-dark);
-      line-height: 1.3;
-    }
+    h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; color: var(--text-dark); line-height: 1.3; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    ul {
-      list-style: none;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
     /* ===== BUTTONS ===== */
     .btn {
@@ -78,635 +64,488 @@
       border: 2px solid transparent;
       text-align: center;
     }
+    .btn-primary { background: var(--primary); color: var(--bg-white); box-shadow: 0 4px 15px rgba(0, 168, 255, 0.3); }
+    .btn-primary:hover { background: #0097e6; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0, 168, 255, 0.4); }
+    .btn-accent { background: var(--accent); color: var(--text-dark); box-shadow: 0 4px 15px rgba(253, 203, 110, 0.4); }
+    .btn-accent:hover { background: #f9b93b; transform: translateY(-2px); }
+    .btn-outline { background: transparent; color: var(--text-dark); border: 2px solid var(--text-dark); }
+    .btn-outline:hover { background: var(--text-dark); color: var(--bg-white); transform: translateY(-2px); }
 
-    .btn-primary {
-      background: var(--primary);
-      color: var(--bg-white);
-      box-shadow: 0 4px 15px rgba(0, 168, 255, 0.3);
-    }
-
-    .btn-primary:hover {
-      background: #0097e6;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 168, 255, 0.4);
-    }
-
-    .btn-accent {
-      background: var(--accent);
-      color: var(--text-dark);
-      box-shadow: 0 4px 15px rgba(253, 203, 110, 0.4);
-    }
-
-    .btn-accent:hover {
-      background: #f9b93b;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(253, 203, 110, 0.5);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--text-dark);
-      border: 2px solid var(--text-dark);
-    }
-
-    .btn-outline:hover {
-      background: var(--text-dark);
-      color: var(--bg-white);
-      transform: translateY(-2px);
-    }
-
-    .btn-whatsapp {
-      background: #25D366;
-      color: var(--bg-white);
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin-top: 15px;
-      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-    }
-
-    .btn-whatsapp:hover {
-      background: #1ebe5d;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-    }
-
-    /* ===== HEADER & TABS ===== */
+    /* ===== HEADER ===== */
     .header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      position: sticky; top: 0; z-index: 1000;
       background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(10px);
       box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
       padding: 10px 0;
     }
-
     .nav-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 20px; flex-wrap: nowrap;
     }
-
-    .logo img {
-      height: 55px;
-      width: auto;
-      display: block;
+    .logo {
+      display: flex; align-items: center; gap: 10px;
+      flex-shrink: 0; max-width: 340px;
     }
-
+    .logo img { height: 48px; width: auto; display: block; flex-shrink: 0; }
+    .logo-text { display: flex; flex-direction: column; line-height: 1.15; min-width: 0; }
+    .logo-text .company-name {
+      font-family: 'Poppins', sans-serif; font-size: 0.98rem; font-weight: 700;
+      color: var(--text-dark); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .logo-text .company-tagline {
+      font-size: 0.62rem; color: var(--primary); font-weight: 500;
+      letter-spacing: 0.3px; text-transform: uppercase;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
     .nav-links {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      background: var(--bg-light);
-      padding: 6px;
-      border-radius: 50px;
-      overflow-x: auto;
-      white-space: nowrap;
+      display: flex; gap: 4px; align-items: center;
+      background: var(--bg-light); padding: 5px; border-radius: 50px;
+      overflow-x: auto; white-space: nowrap; flex-shrink: 1; min-width: 0;
     }
-
-    .nav-links::-webkit-scrollbar {
-      display: none;
-    }
-
+    .nav-links::-webkit-scrollbar { display: none; }
+    .nav-links li { flex-shrink: 0; }
     .nav-links li a {
-      font-weight: 500;
-      font-size: 0.95rem;
-      color: var(--text-body);
-      transition: var(--transition);
-      padding: 8px 18px;
-      border-radius: 50px;
-      display: block;
+      font-weight: 500; font-size: 0.88rem; color: var(--text-body);
+      transition: var(--transition); padding: 8px 15px;
+      border-radius: 50px; display: block;
     }
+    .nav-links li a:hover { color: var(--primary); background: rgba(0, 168, 255, 0.08); }
+    .nav-links li a.active { background: var(--primary); color: var(--bg-white); box-shadow: 0 2px 10px rgba(0, 168, 255, 0.2); }
 
-    .nav-links li a:hover {
-      color: var(--primary);
-      background: rgba(0, 168, 255, 0.08);
-    }
+    /* ===== TAB SYSTEM ===== */
+    .main-content { flex: 1; padding: 40px 0 80px; }
+    .tab-content { display: none; animation: fadeIn 0.4s ease forwards; }
+    .tab-content.active { display: block; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-    .nav-links li a.active {
-      background: var(--primary);
-      color: var(--bg-white);
-      box-shadow: 0 2px 10px rgba(0, 168, 255, 0.2);
-    }
-
-    .nav-cta {
-      padding: 10px 22px;
-      font-size: 0.9rem;
-    }
-
-    /* ===== TAB CONTENT SYSTEM ===== */
-    .main-content {
-      flex: 1;
-      padding: 40px 0 80px;
-    }
-
-    .tab-content {
-      display: none;
-      animation: fadeIn 0.4s ease forwards;
-    }
-
-    .tab-content.active {
-      display: block;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ===== HERO SECTION ===== */
+    /* ===== HERO ===== */
     .hero {
-      min-height: 70vh;
-      display: flex;
-      align-items: center;
-      background: linear-gradient(rgba(44, 62, 80, 0.6), rgba(44, 62, 80, 0.6)),
+      min-height: 70vh; display: flex; align-items: center;
+      background: linear-gradient(rgba(44, 62, 80, 0.65), rgba(44, 62, 80, 0.65)),
                   url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
-      color: var(--bg-white);
-      padding: 60px 40px;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      margin-bottom: 30px;
+      color: var(--bg-white); padding: 60px 40px;
+      border-radius: var(--radius); box-shadow: var(--shadow); margin-bottom: 30px;
     }
+    .hero-content { max-width: 750px; }
+    .hero h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); color: var(--bg-white); margin-bottom: 20px; }
+    .hero p { font-size: 1.15rem; margin-bottom: 35px; opacity: 0.95; max-width: 650px; color: #E2E8F0; }
+    .hero-buttons { display: flex; flex-wrap: wrap; gap: 15px; }
 
-    .hero-content {
-      max-width: 750px;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.2rem, 5vw, 3.8rem);
-      color: var(--bg-white);
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 1.15rem;
-      margin-bottom: 35px;
-      opacity: 0.95;
-      max-width: 650px;
-      color: #E2E8F0;
-    }
-
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-
-    /* ===== TRUST BADGES ===== */
-    .grid-4 {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 25px;
-    }
-
+    /* ===== GRID / BADGES ===== */
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
     .badge {
-      text-align: center;
-      padding: 35px 20px;
-      border-radius: var(--radius);
-      transition: var(--transition);
-      background: var(--bg-white);
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(0, 168, 255, 0.05);
+      text-align: center; padding: 35px 20px; border-radius: var(--radius);
+      transition: var(--transition); background: var(--bg-white);
+      box-shadow: var(--shadow); border: 1px solid rgba(0, 168, 255, 0.05);
     }
-
-    .badge:hover {
-      box-shadow: var(--shadow-hover);
-      transform: translateY(-5px);
-      border-color: rgba(0, 168, 255, 0.2);
-    }
-
-    .badge i {
-      font-size: 2.2rem;
-      color: var(--secondary);
-      margin-bottom: 15px;
-    }
-
-    .badge h3 {
-      font-size: 1.1rem;
-      margin-bottom: 10px;
-    }
-
-    .badge p {
-      font-size: 0.92rem;
-      color: var(--text-body);
-    }
+    .badge:hover { box-shadow: var(--shadow-hover); transform: translateY(-5px); border-color: rgba(0, 168, 255, 0.2); }
+    .badge i { font-size: 2.2rem; color: var(--secondary); margin-bottom: 15px; }
+    .badge h3 { font-size: 1.1rem; margin-bottom: 10px; }
+    .badge p { font-size: 0.92rem; }
 
     /* ===== SERVICES ===== */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-    }
-
+    .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
     .service-card {
-      background: var(--bg-white);
-      padding: 35px 30px;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      transition: var(--transition);
-      border-top: 4px solid var(--secondary);
+      background: var(--bg-white); padding: 35px 30px; border-radius: var(--radius);
+      box-shadow: var(--shadow); transition: var(--transition);
       border: 1px solid rgba(0, 168, 255, 0.05);
     }
+    .service-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); }
+    .service-card i { font-size: 2rem; color: var(--primary); margin-bottom: 18px; }
+    .service-card h3 { font-size: 1.3rem; margin-bottom: 12px; }
+    .service-card p { margin-bottom: 18px; font-size: 0.95rem; }
+    .service-card ul { margin-bottom: 22px; }
+    .service-card ul li { margin-bottom: 8px; font-size: 0.92rem; display: flex; align-items: center; gap: 8px; }
+    .service-card ul li i { font-size: 0.9rem; color: var(--secondary); margin: 0; }
 
-    .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-hover);
-    }
-
-    .service-card i {
-      font-size: 2rem;
-      color: var(--primary);
-      margin-bottom: 18px;
-    }
-
-    .service-card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 12px;
-    }
-
-    .service-card p {
-      margin-bottom: 18px;
-      font-size: 0.95rem;
-    }
-
-    .service-card ul {
-      margin-bottom: 22px;
-    }
-
-    .service-card ul li {
-      margin-bottom: 8px;
-      font-size: 0.92rem;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .service-card ul li i {
-      font-size: 0.9rem;
-      color: var(--secondary);
-      margin: 0;
-    }
-
-    .service-card .btn {
-      padding: 10px 22px;
-      font-size: 0.88rem;
-    }
-
-    /* ===== ABOUT ===== */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .about-text h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .about-text p {
-      margin-bottom: 18px;
-    }
-
-    .about-image img {
-      width: 100%;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      object-fit: cover;
-      height: 400px;
-    }
-
-    /* ===== SERVICE AREA ===== */
-    .service-area {
-      padding: 60px 40px;
-      background: var(--bg-white);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      text-align: center;
-      border: 1px solid rgba(0, 168, 255, 0.05);
-    }
-
-    .service-area h2 {
-      font-size: 2rem;
-      margin-bottom: 15px;
-    }
-
-    .service-area > p {
-      max-width: 700px;
-      margin: 0 auto 30px;
-    }
-
-    .area-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 18px 30px;
-    }
-
-    .area-list li {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 600;
-      color: var(--text-dark);
-      background: var(--bg-light);
-      padding: 10px 22px;
-      border-radius: 50px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-    }
-
-    .area-list li i {
-      color: var(--primary);
-    }
-
-    /* ===== CONTACT ===== */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-    }
+    /* ===== ABOUT / CONTACT ===== */
+    .about-grid, .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .about-text h2 { font-size: 2rem; margin-bottom: 20px; }
+    .about-text p { margin-bottom: 18px; }
+    .about-image img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); object-fit: cover; height: 400px; }
 
     .contact-form, .contact-info {
+      background: var(--bg-white); padding: 40px; border-radius: var(--radius);
+      box-shadow: var(--shadow); border: 1px solid rgba(0, 168, 255, 0.05);
+    }
+    .contact-form h2, .contact-info h2 { font-size: 1.8rem; margin-bottom: 25px; }
+    .contact-form input, .contact-form select, .contact-form textarea {
+      width: 100%; padding: 14px 16px; margin-bottom: 16px;
+      border: 1px solid #cbd5e1; border-radius: 8px; font-family: inherit;
+      font-size: 0.95rem; outline: none; transition: var(--transition); background: var(--bg-light);
+    }
+    .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus {
+      border-color: var(--primary); box-shadow: 0 0 0 3px rgba(0, 168, 255, 0.15); background: var(--bg-white);
+    }
+    .contact-form button { border: none; width: 100%; padding: 14px; font-size: 1rem; }
+
+    /* ===== CONTACT ACTION CARDS ===== */
+    .contact-action-list {
+      display: flex; flex-direction: column; gap: 14px;
+      margin-top: 25px; margin-bottom: 25px;
+    }
+    .contact-action {
+      display: flex; align-items: center; gap: 15px;
+      padding: 16px 20px; border-radius: 12px;
+      background: var(--bg-light); border: 1px solid rgba(0, 168, 255, 0.08);
+      transition: var(--transition); color: var(--text-dark); font-weight: 500;
+    }
+    .contact-action:hover { transform: translateX(5px); box-shadow: var(--shadow-hover); border-color: var(--primary); }
+    .contact-action .action-icon {
+      width: 44px; height: 44px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; color: #fff; flex-shrink: 0;
+    }
+    .contact-action.fb .action-icon { background: #1877F2; }
+    .contact-action.wa .action-icon { background: #25D366; }
+    .contact-action.call .action-icon { background: var(--primary); }
+    .contact-action.email .action-icon { background: var(--secondary); }
+    .contact-action .action-text { display: flex; flex-direction: column; line-height: 1.3; }
+    .contact-action .action-text .label {
+      font-size: 0.78rem; color: var(--text-body); font-weight: 500;
+      text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .contact-action .action-text .value { font-size: 0.95rem; color: var(--text-dark); font-weight: 600; }
+    .contact-action .action-arrow {
+      margin-left: auto; color: var(--text-body); font-size: 0.85rem;
+      transition: var(--transition);
+    }
+    .contact-action:hover .action-arrow { color: var(--primary); transform: translateX(3px); }
+
+    .contact-info .info-line {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 14px; font-size: 0.98rem;
+    }
+    .contact-info .info-line i { color: var(--primary); font-size: 1.1rem; width: 22px; text-align: center; }
+
+    /* ===== SERVICE AREA ===== */
+    .service-area-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 40px;
+      align-items: stretch;
+    }
+    .service-area-info {
+      padding: 45px 35px;
       background: var(--bg-white);
-      padding: 40px;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       border: 1px solid rgba(0, 168, 255, 0.05);
-    }
-
-    .contact-form h2,
-    .contact-info h2 {
-      font-size: 1.8rem;
-      margin-bottom: 25px;
-    }
-
-    .contact-form input,
-    .contact-form select,
-    .contact-form textarea {
-      width: 100%;
-      padding: 14px 16px;
-      margin-bottom: 16px;
-      border: 1px solid #cbd5e1;
-      border-radius: 8px;
-      font-family: inherit;
-      font-size: 0.95rem;
-      outline: none;
-      transition: var(--transition);
-      background: var(--bg-light);
-    }
-
-    .contact-form input:focus,
-    .contact-form select:focus,
-    .contact-form textarea:focus {
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(0, 168, 255, 0.15);
-      background: var(--bg-white);
-    }
-
-    .contact-form button {
-      border: none;
-      width: 100%;
-      padding: 14px;
-      font-size: 1rem;
-    }
-
-    .contact-info p {
       display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .service-area-info h2 { font-size: 1.8rem; margin-bottom: 15px; }
+    .service-area-info > p { margin-bottom: 25px; }
+
+    .area-list { display: flex; flex-direction: column; gap: 14px; margin-bottom: 25px; }
+    .area-list li {
+      display: flex; align-items: center; gap: 12px;
+      font-weight: 600; color: var(--text-dark);
+      background: var(--bg-light); padding: 14px 18px;
+      border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+      transition: var(--transition); border-left: 4px solid var(--primary);
+    }
+    .area-list li:hover { transform: translateX(5px); box-shadow: var(--shadow); }
+    .area-list li i { color: var(--primary); font-size: 1.1rem; flex-shrink: 0; }
+    .area-list li .area-text { display: flex; flex-direction: column; line-height: 1.3; }
+    .area-list li .area-text .area-name { font-size: 0.98rem; color: var(--text-dark); }
+    .area-list li .area-text .area-type {
+      font-size: 0.75rem; color: var(--text-body); font-weight: 500;
+      text-transform: uppercase; letter-spacing: 0.4px;
+    }
+
+    /* ===== CHECK MY ADDRESS BOX ===== */
+    .check-address-box {
+      margin-top: 10px;
+      padding: 20px;
+      background: linear-gradient(135deg, rgba(0, 168, 255, 0.06), rgba(0, 184, 148, 0.06));
+      border-radius: 14px;
+      border: 1px dashed rgba(0, 168, 255, 0.4);
+    }
+    .check-address-box .box-title {
+      display: flex; align-items: center; gap: 8px;
+      font-weight: 600; color: var(--text-dark); font-size: 0.95rem;
+      margin-bottom: 6px;
+    }
+    .check-address-box .box-title i { color: var(--primary); }
+    .check-address-box .box-subtitle { font-size: 0.82rem; color: var(--text-body); margin-bottom: 14px; }
+    .check-btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      width: 100%; padding: 13px 22px; border-radius: 50px;
+      background: var(--primary); color: #fff; font-weight: 600; font-size: 0.95rem;
+      border: none; cursor: pointer; transition: var(--transition);
+      box-shadow: 0 4px 15px rgba(0, 168, 255, 0.3); font-family: inherit;
+    }
+    .check-btn:hover:not(:disabled) { background: #0097e6; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0, 168, 255, 0.4); }
+    .check-btn:disabled { opacity: 0.7; cursor: not-allowed; }
+    .check-btn .fa-spinner { animation: spin 1s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .location-result {
+      margin-top: 14px; padding: 14px 16px; border-radius: 10px;
+      font-size: 0.88rem; display: none; animation: fadeIn 0.4s ease; line-height: 1.5;
+    }
+    .location-result.show { display: block; }
+    .location-result .result-head {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; margin-bottom: 6px; font-size: 0.95rem;
+    }
+    .location-result .result-head i { font-size: 1.1rem; }
+    .location-result .coords { font-size: 0.78rem; color: var(--text-body); margin-top: 6px; font-family: monospace; }
+    .location-result.success { background: rgba(0, 184, 148, 0.1); border: 1px solid rgba(0, 184, 148, 0.3); color: #00795e; }
+    .location-result.success .result-head { color: var(--success); }
+    .location-result.warning { background: rgba(253, 203, 110, 0.15); border: 1px solid rgba(253, 203, 110, 0.5); color: #8a6300; }
+    .location-result.warning .result-head { color: #c98a00; }
+    .location-result.error { background: rgba(225, 112, 85, 0.1); border: 1px solid rgba(225, 112, 85, 0.3); color: #a93f22; }
+    .location-result.error .result-head { color: var(--danger); }
+    .location-result .result-action {
+      margin-top: 10px; display: inline-flex; align-items: center; gap: 6px;
+      font-weight: 600; font-size: 0.85rem; color: var(--primary);
+    }
+
+    .service-area-map {
+      background: var(--bg-white); border-radius: var(--radius);
+      box-shadow: var(--shadow); border: 1px solid rgba(0, 168, 255, 0.05);
+      overflow: hidden; min-height: 480px; position: relative;
+    }
+    .service-area-map iframe { width: 100%; height: 100%; min-height: 480px; border: 0; display: block; filter: saturate(1.05); }
+    .map-legend {
+      position: absolute; bottom: 15px; left: 15px;
+      background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px);
+      padding: 12px 16px; border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      font-size: 0.82rem; display: flex; flex-direction: column;
+      gap: 6px; pointer-events: none; max-width: 220px;
+    }
+    .map-legend .legend-title { font-weight: 700; color: var(--text-dark); font-size: 0.85rem; margin-bottom: 2px; }
+    .map-legend .legend-item { display: flex; align-items: center; gap: 8px; color: var(--text-body); font-weight: 500; }
+    .map-legend .legend-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--primary); flex-shrink: 0; }
+    .map-legend .legend-dot.covered { background: var(--secondary); box-shadow: 0 0 0 3px rgba(0, 184, 148, 0.2); }
+    .map-legend .legend-dot.you { background: var(--danger); box-shadow: 0 0 0 3px rgba(225, 112, 85, 0.25); }
+
+    /* ===== STATS COUNTER ===== */
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; margin: 40px 0; }
+    .stat-item {
+      background: var(--bg-white); padding: 30px 20px; border-radius: var(--radius);
+      text-align: center; box-shadow: var(--shadow);
+      border: 1px solid rgba(0, 168, 255, 0.05); transition: var(--transition);
+    }
+    .stat-item:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
+    .stat-number {
+      font-family: 'Poppins', sans-serif; font-size: 2.5rem; font-weight: 700;
+      color: var(--primary); line-height: 1; margin-bottom: 8px;
+    }
+    .stat-label { font-size: 0.95rem; color: var(--text-body); font-weight: 500; }
+
+    /* ===== SECTION HEADER ===== */
+    .section-header { text-align: center; margin-bottom: 40px; }
+    .section-header h2 { font-size: 2rem; margin-bottom: 12px; }
+    .section-header p { max-width: 650px; margin: 0 auto; color: var(--text-body); }
+
+    /* ===== CLIENTS GRID ===== */
+    .clients-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+    }
+    .client-card {
+      background: var(--bg-white); padding: 32px 26px;
+      border-radius: var(--radius); box-shadow: var(--shadow);
+      border: 1px solid rgba(0, 168, 255, 0.06); transition: var(--transition);
+      text-align: left; position: relative; overflow: hidden;
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .client-card::before {
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 5px; height: 100%;
+      background: linear-gradient(180deg, var(--primary), var(--secondary));
+    }
+    .client-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); border-color: rgba(0, 168, 255, 0.2); }
+    .client-header { display: flex; align-items: center; gap: 15px; }
+    .client-avatar {
+      width: 56px; height: 56px; border-radius: 14px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #fff; display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(0, 168, 255, 0.25);
+    }
+    .client-info { min-width: 0; }
+    .client-info h3 { font-size: 1.05rem; margin-bottom: 4px; color: var(--text-dark); line-height: 1.3; }
+    .client-info .client-location {
+      font-size: 0.82rem; color: var(--text-body);
+      display: flex; align-items: flex-start; gap: 5px; line-height: 1.35;
+    }
+    .client-info .client-location i { color: var(--primary); font-size: 0.75rem; margin-top: 3px; flex-shrink: 0; }
+    .client-services { display: flex; flex-wrap: wrap; gap: 8px; }
+    .client-tag {
+      display: inline-block; background: rgba(0, 168, 255, 0.1);
+      color: var(--primary); font-size: 0.75rem; font-weight: 600;
+      padding: 5px 12px; border-radius: 50px; white-space: nowrap;
+    }
+    .client-tag.green { background: rgba(0, 184, 148, 0.1); color: var(--secondary); }
+
+    /* Point of Sale badge (top-right of card) */
+    .pos-badge {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: linear-gradient(135deg, var(--accent), #f9b93b);
+      color: var(--text-dark);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      padding: 5px 10px;
+      border-radius: 50px;
+      display: inline-flex;
       align-items: center;
-      gap: 12px;
-      margin-bottom: 18px;
-      font-size: 1rem;
+      gap: 5px;
+      box-shadow: 0 3px 10px rgba(253, 203, 110, 0.4);
+      text-transform: uppercase;
     }
+    .pos-badge i { font-size: 0.7rem; }
 
-    .contact-info p i {
-      color: var(--primary);
-      font-size: 1.2rem;
-      width: 22px;
-      text-align: center;
+    /* Point of Sale tag (bottom of card) */
+    .client-tag.outlet {
+      background: linear-gradient(135deg, rgba(253, 203, 110, 0.25), rgba(249, 185, 59, 0.25));
+      color: #8a6300;
+      border: 1px solid rgba(253, 203, 110, 0.6);
     }
+    .client-tag.outlet i { margin-right: 4px; font-size: 0.7rem; }
 
-    /* ===== FOOTER ===== */
-    .footer {
-      background: var(--text-dark);
-      color: var(--bg-white);
-      text-align: center;
-      padding: 30px 0;
-      font-size: 0.9rem;
-      margin-top: auto;
+    /* ===== TESTIMONIALS ===== */
+    .testimonials-section {
+      margin-top: 60px; padding: 50px 30px;
+      background: linear-gradient(135deg, rgba(0, 168, 255, 0.05) 0%, rgba(0, 184, 148, 0.05) 100%);
+      border-radius: var(--radius); text-align: center;
     }
+    .testimonials-section h2 { font-size: 2rem; margin-bottom: 15px; }
+    .testimonials-section > p { max-width: 600px; margin: 0 auto 35px; }
+    .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+    .testimonial-card {
+      background: var(--bg-white); padding: 30px 25px; border-radius: var(--radius);
+      box-shadow: var(--shadow); text-align: left; border-left: 4px solid var(--secondary);
+      transition: var(--transition);
+    }
+    .testimonial-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
+    .testimonial-card .stars { color: var(--accent); margin-bottom: 12px; font-size: 0.95rem; }
+    .testimonial-card .quote { font-style: italic; color: var(--text-body); margin-bottom: 18px; line-height: 1.7; }
+    .testimonial-author { display: flex; align-items: center; gap: 12px; }
+    .testimonial-author .avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--primary); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 1rem;
+    }
+    .testimonial-author .name { font-weight: 600; color: var(--text-dark); font-size: 0.95rem; }
+    .testimonial-author .role { font-size: 0.82rem; color: var(--text-body); }
 
-    .footer p {
-      opacity: 0.8;
+    /* ===== FAQ ===== */
+    .faq-section { margin-top: 50px; padding: 40px 0; }
+    .faq-section h2 { font-size: 2rem; text-align: center; margin-bottom: 10px; }
+    .faq-section > p { text-align: center; max-width: 600px; margin: 0 auto 35px; }
+    .faq-item {
+      background: var(--bg-white); border-radius: 12px; margin-bottom: 14px;
+      box-shadow: var(--shadow); overflow: hidden; border: 1px solid rgba(0, 168, 255, 0.06);
     }
-
-    .footer p:last-child {
-      margin-top: 6px;
-      font-weight: 500;
-      opacity: 1;
-      color: var(--accent);
+    .faq-question {
+      padding: 20px 24px; cursor: pointer; font-weight: 600;
+      color: var(--text-dark); display: flex; justify-content: space-between;
+      align-items: center; gap: 15px; transition: var(--transition);
     }
+    .faq-question:hover { background: rgba(0, 168, 255, 0.04); }
+    .faq-question i { color: var(--primary); transition: transform 0.3s ease; }
+    .faq-item.open .faq-question i { transform: rotate(180deg); }
+    .faq-answer {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+      padding: 0 24px; color: var(--text-body); font-size: 0.95rem; line-height: 1.7;
+    }
+    .faq-item.open .faq-answer { max-height: 300px; padding: 0 24px 22px; }
 
     /* ===== FLOATING WHATSAPP ===== */
     .whatsapp-float {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: #25D366;
-      color: var(--bg-white);
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.8rem;
-      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-      z-index: 1000;
-      transition: var(--transition);
+      position: fixed; bottom: 25px; right: 25px;
+      background: #25D366; color: var(--bg-white);
+      width: 60px; height: 60px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.8rem; box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+      z-index: 1000; transition: var(--transition);
       animation: pulse 2s infinite;
     }
-
-    .whatsapp-float:hover {
-      transform: scale(1.1);
-      background: #1ebe5d;
-    }
-
+    .whatsapp-float:hover { transform: scale(1.1); background: #1ebe5d; }
     @keyframes pulse {
       0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
       70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
       100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
     }
 
-    /* ===== CLIENTS SERVED SECTION ===== */
-    .clients-section {
-      margin-top: 60px;
-      padding: 50px 30px;
-      background: var(--bg-white);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(0, 168, 255, 0.05);
-      text-align: center;
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--text-dark); color: var(--bg-white);
+      text-align: center; padding: 30px 0; font-size: 0.9rem; margin-top: auto;
     }
-
-    .clients-section h2 {
-      font-size: 2rem;
-      margin-bottom: 15px;
-      color: var(--text-dark);
-    }
-
-    .clients-section > p {
-      max-width: 600px;
-      margin: 0 auto 35px;
-      color: var(--text-body);
-    }
-
-    .clients-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-      justify-content: center;
-    }
-
-    .client-card {
-      background: var(--bg-light);
-      padding: 30px 20px;
-      border-radius: var(--radius);
-      transition: var(--transition);
-      border: 1px solid rgba(0, 168, 255, 0.08);
-      text-align: center;
-    }
-
-    .client-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-hover);
-      border-color: rgba(0, 168, 255, 0.2);
-    }
-
-    .client-card i {
-      font-size: 2rem;
-      color: var(--secondary);
-      margin-bottom: 15px;
-      display: block;
-    }
-
-    .client-card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 8px;
-      color: var(--text-dark);
-    }
-
-    .client-card p {
-      font-size: 0.92rem;
-      color: var(--text-body);
-      margin-bottom: 5px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-    }
-
-    .client-card p i {
-      font-size: 0.85rem;
-      color: var(--primary);
-      margin: 0;
-      display: inline;
-    }
-
-    .client-tag {
-      display: inline-block;
-      background: rgba(0, 168, 255, 0.12);
-      color: var(--primary);
-      font-size: 0.8rem;
-      font-weight: 600;
-      padding: 4px 14px;
-      border-radius: 50px;
-      margin-top: 10px;
-    }
+    .footer p { opacity: 0.8; }
+    .footer p:last-child { margin-top: 6px; font-weight: 500; opacity: 1; color: var(--accent); }
 
     /* ===== RESPONSIVE ===== */
+    @media (max-width: 1100px) {
+      .logo-text .company-name { font-size: 0.88rem; }
+      .logo-text .company-tagline { font-size: 0.58rem; }
+      .nav-links li a { font-size: 0.82rem; padding: 8px 12px; }
+    }
+
     @media (max-width: 992px) {
-      .grid-4 {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-      .about-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-      .about-image img {
-        height: 300px;
-      }
-      .contact-form, .contact-info {
-        padding: 25px;
-      }
+      .grid-4, .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .services-grid { grid-template-columns: 1fr; }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .about-image img { height: 300px; }
+      .contact-form, .contact-info { padding: 25px; }
+      .service-area-wrapper { grid-template-columns: 1fr; gap: 30px; }
+      .service-area-map { min-height: 380px; }
+      .service-area-map iframe { min-height: 380px; }
     }
 
     @media (max-width: 768px) {
-      .nav-container {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      .logo {
-        margin-bottom: 10px;
-      }
-      .nav-links {
-        order: 3;
-        width: 100%;
-        justify-content: flex-start;
-        padding: 5px;
-      }
-      .nav-cta {
-        display: none;
-      }
-      .hero {
-        padding: 40px 20px;
-        min-height: 60vh;
-      }
-      .hero-buttons {
-        flex-direction: column;
-      }
-      .hero-buttons .btn {
-        width: 100%;
-      }
-      .grid-4 {
-        grid-template-columns: 1fr;
-      }
-      .area-list {
-        flex-direction: column;
-        align-items: center;
-      }
-      .whatsapp-float {
-        width: 55px;
-        height: 55px;
-        font-size: 1.6rem;
-        bottom: 20px;
-        right: 20px;
-      }
-      .clients-grid {
-        grid-template-columns: 1fr;
-      }
-      .clients-section {
-        padding: 30px 20px;
-      }
+      .nav-container { flex-wrap: wrap; justify-content: center; gap: 10px; }
+      .logo { margin-bottom: 0; max-width: 100%; justify-content: center; }
+      .logo-text .company-name { font-size: 0.95rem; }
+      .logo-text .company-tagline { font-size: 0.6rem; }
+      .nav-links { order: 3; width: 100%; justify-content: flex-start; padding: 5px; margin-left: 0; background: transparent; }
+      .nav-links li a { padding: 8px 14px; font-size: 0.85rem; background: var(--bg-light); }
+      .hero { padding: 40px 20px; min-height: 60vh; }
+      .hero-buttons { flex-direction: column; }
+      .hero-buttons .btn { width: 100%; }
+      .grid-4, .stats-grid { grid-template-columns: 1fr; }
+      .whatsapp-float { width: 55px; height: 55px; font-size: 1.6rem; bottom: 20px; right: 20px; }
+      .stat-number { font-size: 2rem; }
+      .service-area-info { padding: 30px 22px; }
+      .service-area-map { min-height: 320px; }
+      .service-area-map iframe { min-height: 320px; }
+      .map-legend { font-size: 0.75rem; padding: 10px 12px; max-width: 180px; }
+    }
+
+    @media (max-width: 480px) {
+      .logo img { height: 42px; }
+      .logo-text .company-name { font-size: 0.85rem; }
+      .logo-text .company-tagline { font-size: 0.55rem; }
+      .map-legend { display: none; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ===== HEADER & TAB NAVIGATION ===== -->
+  <!-- ===== HEADER ===== -->
   <header class="header">
     <div class="container nav-container">
-      <a href="#" class="logo" onclick="switchTab('home')">
-        <!-- Place logo1.jpeg in the same folder as this file -->
+      <a href="#" class="logo" onclick="switchTab('home'); return false;">
         <img src="logo1.jpeg" alt="Sajilo Digital Communication Logo">
+        <div class="logo-text">
+          <span class="company-name">Sajilo Digital Communication</span>
+          <span class="company-tagline">Internet • IPTV • CCTV • Networking</span>
+        </div>
       </a>
-      
+
       <ul class="nav-links" id="navLinks">
         <li><a href="#" class="tab-link active" data-tab="home" onclick="switchTab('home', event)">Home</a></li>
         <li><a href="#" class="tab-link" data-tab="services" onclick="switchTab('services', event)">Services</a></li>
@@ -716,21 +555,19 @@
         <li><a href="#" class="tab-link" data-tab="service-area" onclick="switchTab('service-area', event)">Service Area</a></li>
         <li><a href="#" class="tab-link" data-tab="contact" onclick="switchTab('contact', event)">Contact</a></li>
       </ul>
-
-      <a href="#" class="btn btn-primary nav-cta" onclick="switchTab('contact', event)">Get Connected</a>
     </div>
   </header>
 
-  <!-- ===== MAIN TABBED CONTENT ===== -->
+  <!-- ===== MAIN ===== -->
   <main class="main-content">
     <div class="container">
 
-      <!-- TAB 1: HOME -->
+      <!-- ================= HOME TAB ================= -->
       <div id="home" class="tab-content active">
         <section class="hero">
           <div class="hero-content">
             <h1>Fast. Secure. Connected.</h1>
-            <p>Bara’s trusted partner for High-Speed Fiber Internet and Advanced Security Systems. We bring reliable connectivity to your home and business in Jeetpur-Simara and beyond.</p>
+            <p>Bara's trusted partner for High-Speed Fiber Internet, IPTV, and Advanced Security Systems. We bring reliable connectivity to your home and business in Jeetpur-Simara and beyond.</p>
             <div class="hero-buttons">
               <a href="#" class="btn btn-accent" onclick="switchTab('contact', event)">Get Internet Today</a>
               <a href="#" class="btn btn-outline" onclick="switchTab('contact', event)" style="color: white; border-color: white;">Request a Quote</a>
@@ -738,34 +575,82 @@
           </div>
         </section>
 
-        <!-- ===== CLIENTS SERVED (HOME TAB) ===== -->
-        <section class="clients-section">
-          <h2>Clients We Serve</h2>
-          <p>Trusted by leading businesses and hotels across Bara. Here are some of the valued clients who rely on Sajilo Digital Communication for their connectivity and security needs.</p>
-          <div class="clients-grid">
-            <!-- Client 1: Anmol Sweets -->
-            <div class="client-card">
-              <i class="fas fa-store"></i>
-              <h3>Anmol Sweets</h3>
-              <p><i class="fas fa-map-marker-alt"></i> Jeetpur, Bara</p>
-              <p><i class="fas fa-building"></i> Outlet &amp; Factory</p>
-              <span class="client-tag">CCTV &amp; Networking</span>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number" data-target="1.4" data-suffix="K+">0</div>
+            <div class="stat-label">Happy Customers</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="99" data-suffix="%">0</div>
+            <div class="stat-label">Uptime</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="5" data-suffix="+">0</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="24" data-suffix="/7">0</div>
+            <div class="stat-label">Support</div>
+          </div>
+        </div>
+
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <p>Quick answers to what customers ask us most.</p>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              How fast can you install internet at my home?
+              <i class="fas fa-chevron-down"></i>
             </div>
-            <!-- Client 2: Binod Line Hotel -->
-            <div class="client-card">
-              <i class="fas fa-hotel"></i>
-              <h3>Binod Line Hotel</h3>
-              <p><i class="fas fa-map-marker-alt"></i> Jeetpur, Bara</p>
-              <p><i class="fas fa-wifi"></i> High-Speed Internet &amp; CCTV</p>
-              <span class="client-tag">Internet &amp; Security</span>
+            <div class="faq-answer">For most areas in Jeetpur-Simara, Parsagadhi, and Sakhuwaparsauni, we can complete installation within 24–48 hours of your request. Just call or WhatsApp us at +977 9802596081.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              Do you provide IPTV service?
+              <i class="fas fa-chevron-down"></i>
             </div>
+            <div class="faq-answer">Yes! We offer IPTV packages with hundreds of Nepali, Indian, and international channels in HD quality. Bundled with our internet plans at a discounted rate.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              Do you provide CCTV cameras with mobile viewing?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">Yes. All our CCTV installations come with mobile remote viewing so you can monitor your home or business from anywhere using your smartphone.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              Where can I visit in person to buy your services?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">You can visit our authorized Point of Sale at <strong>Ghimire General tatha Dudh Dairy Pasal</strong>, located at Jeetpur-Simara-7, Jeetpur Tedha Road, Bara. Our friendly staff there can help you sign up for internet, IPTV, or CCTV services.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              What areas do you serve?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">We serve the entire Jeetpur-Simara Sub-Metropolitan City, Parsagadhi Municipality, and Sakhuwaparsauni Rural Municipality. Check our Service Area tab to check your exact location on the map.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              Do you offer maintenance for existing CCTV systems?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">Absolutely. We service and repair CCTV systems even if they were installed by someone else. We also offer routine maintenance contracts for businesses.</div>
           </div>
         </section>
       </div>
 
-      <!-- TAB 2: SERVICES -->
+      <!-- ================= SERVICES TAB ================= -->
       <div id="services" class="tab-content">
-        <h2 class="section-title" style="text-align: center; margin-bottom: 40px; font-size: 2.2rem;">Our Core Solutions</h2>
+        <h2 style="text-align: center; margin-bottom: 40px; font-size: 2.2rem;">Our Core Solutions</h2>
         <div class="services-grid">
           <div class="service-card">
             <i class="fas fa-wifi"></i>
@@ -778,6 +663,19 @@
             </ul>
             <a href="#" class="btn btn-primary" onclick="switchTab('contact', event)">View Plans</a>
           </div>
+
+          <div class="service-card">
+            <i class="fas fa-tv"></i>
+            <h3>IPTV Services</h3>
+            <p>Enjoy hundreds of HD channels with our IPTV service. Nepali, Indian, and international content delivered over your internet connection.</p>
+            <ul>
+              <li><i class="fas fa-check-circle"></i> 300+ HD Channels</li>
+              <li><i class="fas fa-check-circle"></i> Nepali, Indian &amp; International</li>
+              <li><i class="fas fa-check-circle"></i> Bundle with Internet &amp; Save</li>
+            </ul>
+            <a href="#" class="btn btn-primary" onclick="switchTab('contact', event)">Get IPTV</a>
+          </div>
+
           <div class="service-card">
             <i class="fas fa-video"></i>
             <h3>CCTV & Security Systems</h3>
@@ -789,6 +687,7 @@
             </ul>
             <a href="#" class="btn btn-primary" onclick="switchTab('contact', event)">Secure My Property</a>
           </div>
+
           <div class="service-card">
             <i class="fas fa-network-wired"></i>
             <h3>Internal Networking</h3>
@@ -800,6 +699,7 @@
             </ul>
             <a href="#" class="btn btn-primary" onclick="switchTab('contact', event)">Optimize Office</a>
           </div>
+
           <div class="service-card">
             <i class="fas fa-broadcast-tower"></i>
             <h3>External Networking</h3>
@@ -814,9 +714,9 @@
         </div>
       </div>
 
-      <!-- TAB 3: WHY US -->
+      <!-- ================= WHY US TAB ================= -->
       <div id="why-us" class="tab-content">
-        <h2 class="section-title" style="text-align: center; margin-bottom: 40px; font-size: 2.2rem;">Why Choose Us</h2>
+        <h2 style="text-align: center; margin-bottom: 40px; font-size: 2.2rem;">Why Choose Us</h2>
         <div class="grid-4">
           <div class="badge">
             <i class="fas fa-map-marker-alt"></i>
@@ -841,7 +741,7 @@
         </div>
       </div>
 
-      <!-- TAB 4: ABOUT -->
+      <!-- ================= ABOUT TAB ================= -->
       <div id="about" class="tab-content">
         <div class="about-grid">
           <div class="about-text">
@@ -855,50 +755,184 @@
         </div>
       </div>
 
-      <!-- TAB 5: CLIENTS (Dedicated tab) -->
+      <!-- ================= CLIENTS TAB ================= -->
       <div id="clients" class="tab-content">
-        <section class="clients-section">
+        <div class="section-header">
           <h2>Our Valued Clients</h2>
-          <p>We are proud to serve businesses and institutions across Bara and beyond. Here are some of the organizations that trust us for their digital communication needs.</p>
-          <div class="clients-grid">
-            <!-- Client 1: Anmol Sweets -->
-            <div class="client-card">
-              <i class="fas fa-store"></i>
-              <h3>Anmol Sweets</h3>
-              <p><i class="fas fa-map-marker-alt"></i> Jeetpur, Bara</p>
-              <p><i class="fas fa-building"></i> Outlet &amp; Factory</p>
-              <span class="client-tag">CCTV &amp; Networking</span>
+          <p>Businesses and institutions across Bara trust Sajilo Digital Communication for reliable connectivity and security.</p>
+        </div>
+
+        <div class="clients-grid">
+          <!-- Client 1 -->
+          <div class="client-card">
+            <div class="client-header">
+              <div class="client-avatar"><i class="fas fa-store"></i></div>
+              <div class="client-info">
+                <h3>Anmol Sweets</h3>
+                <div class="client-location"><i class="fas fa-map-marker-alt"></i> Jeetpur, Bara</div>
+              </div>
             </div>
-            <!-- Client 2: Binod Line Hotel -->
-            <div class="client-card">
-              <i class="fas fa-hotel"></i>
-              <h3>Binod Line Hotel</h3>
-              <p><i class="fas fa-map-marker-alt"></i> Jeetpur, Bara</p>
-              <p><i class="fas fa-wifi"></i> High-Speed Internet &amp; CCTV</p>
-              <span class="client-tag">Internet &amp; Security</span>
+            <div class="client-services">
+              <span class="client-tag">Outlet</span>
+              <span class="client-tag green">Factory</span>
+              <span class="client-tag">CCTV</span>
+              <span class="client-tag green">Networking</span>
             </div>
           </div>
-          <!-- Additional note about more clients -->
-          <p style="margin-top: 35px; font-style: italic; color: var(--text-body);">...and many more local businesses, homes, and offices across the region.</p>
+
+          <!-- Client 2 -->
+          <div class="client-card">
+            <div class="client-header">
+              <div class="client-avatar"><i class="fas fa-hotel"></i></div>
+              <div class="client-info">
+                <h3>Binod Line Hotel</h3>
+                <div class="client-location"><i class="fas fa-map-marker-alt"></i> Jeetpur, Bara</div>
+              </div>
+            </div>
+            <div class="client-services">
+              <span class="client-tag">High-Speed Internet</span>
+              <span class="client-tag green">CCTV</span>
+            </div>
+          </div>
+
+          <!-- Client 3 — Ghimire General (Point of Sale) -->
+          <div class="client-card">
+            <span class="pos-badge"><i class="fas fa-store-alt"></i> Point of Sale</span>
+            <div class="client-header">
+              <div class="client-avatar"><i class="fas fa-cow"></i></div>
+              <div class="client-info">
+                <h3>Ghimire General tatha Dudh Dairy Pasal</h3>
+                <div class="client-location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  Jeetpur-Simara-7, Jeetpur Tedha Road, Bara, Nepal
+                </div>
+              </div>
+            </div>
+            <div class="client-services">
+              <span class="client-tag">General Store</span>
+              <span class="client-tag green">Dudh Dairy</span>
+              <span class="client-tag outlet">
+                <i class="fas fa-store-alt"></i>Authorized Point of Sale
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <p style="margin-top: 35px; font-style: italic; text-align: center;">...and many more local businesses, homes, and offices across the region.</p>
+
+        <!-- ===== TESTIMONIALS ===== -->
+        <section class="testimonials-section">
+          <h2>What Our Clients Say</h2>
+          <p>Real feedback from real customers in Bara.</p>
+          <div class="testimonial-grid">
+            <div class="testimonial-card">
+              <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <p class="quote">"Excellent CCTV installation service. The clarity is superb and we can monitor everything from our phones. Very professional team."</p>
+              <div class="testimonial-author">
+                <div class="avatar">S</div>
+                <div>
+                  <div class="name">Business Owner</div>
+                  <div class="role">Jeetpur, Bara</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <p class="quote">"Our guests always complained about slow WiFi. Since switching, not a single complaint. Fast, reliable, and the support is quick."</p>
+              <div class="testimonial-author">
+                <div class="avatar">H</div>
+                <div>
+                  <div class="name">Hotel Manager</div>
+                  <div class="role">Jeetpur, Bara</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+              <p class="quote">"Needed urgent fiber splicing for our office. They arrived same day and fixed it in hours. Highly recommend for any business in Bara."</p>
+              <div class="testimonial-author">
+                <div class="avatar">R</div>
+                <div>
+                  <div class="name">Local Business Owner</div>
+                  <div class="role">Jeetpur-Simara, Bara</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
 
-      <!-- TAB 6: SERVICE AREA -->
+      <!-- ================= SERVICE AREA TAB ================= -->
       <div id="service-area" class="tab-content">
-        <div class="service-area">
-          <h2>Proudly Serving Bara & Beyond</h2>
-          <p>Our network covers key areas in and around the region. We provide rapid response and high-quality installation services in:</p>
-          <ul class="area-list">
-            <li><i class="fas fa-map-pin"></i> Jeetpur-Simara</li>
-            <li><i class="fas fa-map-pin"></i> Bajani</li>
-            <li><i class="fas fa-map-pin"></i> Kalaiya</li>
-            <li><i class="fas fa-map-pin"></i> Bara District</li>
-            <li><i class="fas fa-map-pin"></i> Surrounding Commercial Hubs</li>
-          </ul>
+        <div class="section-header">
+          <h2>Proudly Serving Bara &amp; Beyond</h2>
+          <p>Our network covers these municipalities. Zoom in, explore, or use your location to instantly check if we cover your area.</p>
+        </div>
+
+        <div class="service-area-wrapper">
+          <div class="service-area-info">
+            <h2 style="font-size: 1.5rem;">Our Coverage Area</h2>
+            <p style="font-size: 0.95rem;">We provide rapid response and high-quality installation services across these municipalities:</p>
+            <ul class="area-list">
+              <li>
+                <i class="fas fa-map-pin"></i>
+                <div class="area-text">
+                  <span class="area-name">Jeetpur-Simara</span>
+                  <span class="area-type">Sub-Metropolitan City · Full Coverage</span>
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-map-pin"></i>
+                <div class="area-text">
+                  <span class="area-name">Parsagadhi Municipality</span>
+                  <span class="area-type">Municipality · Full Coverage</span>
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-map-pin"></i>
+                <div class="area-text">
+                  <span class="area-name">Sakhuwaparsauni</span>
+                  <span class="area-type">Rural Municipality · Full Coverage</span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="check-address-box">
+              <div class="box-title">
+                <i class="fas fa-location-crosshairs"></i>
+                Check If We Cover Your Area
+              </div>
+              <div class="box-subtitle">
+                Share your location and we'll instantly tell you if you're inside our service zone.
+              </div>
+              <button type="button" class="check-btn" id="checkLocationBtn">
+                <i class="fas fa-crosshairs"></i>
+                <span>Use My Current Location</span>
+              </button>
+              <div class="location-result" id="locationResult"></div>
+            </div>
+          </div>
+
+          <div class="service-area-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113870.21650472716!2d84.93398715966796!3d27.124736060366006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3993f0000000001%3A0x0!2sJeetpur%20Simara!5e0!3m2!1sen!2snp!4v1700000000000!5m2!1sen!2snp"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Sajilo Digital Communication Service Area Map">
+            </iframe>
+
+            <div class="map-legend">
+              <div class="legend-title">Map Legend</div>
+              <div class="legend-item"><span class="legend-dot covered"></span> Covered Area</div>
+              <div class="legend-item"><span class="legend-dot"></span> Office Location</div>
+              <div class="legend-item"><span class="legend-dot you"></span> Your Location</div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- TAB 7: CONTACT -->
+      <!-- ================= CONTACT TAB ================= -->
       <div id="contact" class="tab-content">
         <div class="contact-grid">
           <div class="contact-form">
@@ -911,6 +945,7 @@
               <select name="service" required>
                 <option value="">Select Service</option>
                 <option value="High-Speed Internet">High-Speed Internet</option>
+                <option value="IPTV Services">IPTV Services</option>
                 <option value="CCTV & Security Systems">CCTV & Security Systems</option>
                 <option value="Internal Networking">Internal Networking</option>
                 <option value="External Networking">External Networking</option>
@@ -920,14 +955,49 @@
               <button type="submit" class="btn btn-primary">Send Request</button>
             </form>
           </div>
+
           <div class="contact-info">
             <h2>Get In Touch</h2>
-            <p><i class="fas fa-map-marker-alt"></i> Jeetpur-Simara-3, Bajani, Bara, Nepal</p>
-            <p><i class="fas fa-phone"></i> +977 9802596081</p>
-            <p><i class="fas fa-envelope"></i> sdc2081@gmail.com</p>
-            <a href="https://wa.me/9779802596081?text=Hello%20Sajilo%20Digital%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." class="btn btn-whatsapp" target="_blank">
-              <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-            </a>
+            <p class="info-line"><i class="fas fa-map-marker-alt"></i> 5X29+5F Gadhimai, Madhesh Province</p>
+            <p class="info-line"><i class="fas fa-envelope"></i> sdc2081@gmail.com</p>
+
+            <div class="contact-action-list">
+              <a href="https://m.me/61591655874726" target="_blank" rel="noopener" class="contact-action fb">
+                <span class="action-icon"><i class="fab fa-facebook-f"></i></span>
+                <span class="action-text">
+                  <span class="label">Connect on Facebook</span>
+                  <span class="value">Send us a message</span>
+                </span>
+                <i class="fas fa-arrow-right action-arrow"></i>
+              </a>
+
+              <a href="https://wa.me/9779802596081?text=Hello%20Sajilo%20Digital%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank" rel="noopener" class="contact-action wa">
+                <span class="action-icon"><i class="fab fa-whatsapp"></i></span>
+                <span class="action-text">
+                  <span class="label">Chat on WhatsApp</span>
+                  <span class="value">+977 9802596081</span>
+                </span>
+                <i class="fas fa-arrow-right action-arrow"></i>
+              </a>
+
+              <a href="tel:+9779802596081" class="contact-action call">
+                <span class="action-icon"><i class="fas fa-phone"></i></span>
+                <span class="action-text">
+                  <span class="label">Call Us Now</span>
+                  <span class="value">+977 9802596081</span>
+                </span>
+                <i class="fas fa-arrow-right action-arrow"></i>
+              </a>
+
+              <a href="mailto:sdc2081@gmail.com" class="contact-action email">
+                <span class="action-icon"><i class="fas fa-envelope"></i></span>
+                <span class="action-text">
+                  <span class="label">Send an Email</span>
+                  <span class="value">sdc2081@gmail.com</span>
+                </span>
+                <i class="fas fa-arrow-right action-arrow"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -939,7 +1009,7 @@
   <footer class="footer">
     <div class="container">
       <p>© 2024 Sajilo Digital Communication. All rights reserved.</p>
-      <p>Simplifying Connectivity & Security.</p>
+      <p>Simplifying Connectivity &amp; Security.</p>
     </div>
   </footer>
 
@@ -948,36 +1018,224 @@
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- ===== TAB SWITCHING JAVASCRIPT ===== -->
+  <!-- ===== SCRIPTS ===== -->
   <script>
     function switchTab(tabId, event) {
-      if (event) {
-        event.preventDefault();
-      }
+      if (event) event.preventDefault();
 
-      // 1. Remove active class from all tab links
-      const tabLinks = document.querySelectorAll('.tab-link');
-      tabLinks.forEach(link => {
+      document.querySelectorAll('.tab-link').forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('data-tab') === tabId) {
-          link.classList.add('active');
-        }
+        if (link.getAttribute('data-tab') === tabId) link.classList.add('active');
       });
 
-      // 2. Hide all tab content
-      const tabContents = document.querySelectorAll('.tab-content');
-      tabContents.forEach(content => {
-        content.classList.remove('active');
-      });
+      document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
 
-      // 3. Show the selected tab content
       const selectedTab = document.getElementById(tabId);
-      if (selectedTab) {
-        selectedTab.classList.add('active');
-      }
+      if (selectedTab) selectedTab.classList.add('active');
 
-      // 4. Scroll to top of the main content area for better UX
       window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      if (tabId === 'home') runCounters();
+    }
+
+    function toggleFaq(el) {
+      const item = el.parentElement;
+      item.classList.toggle('open');
+    }
+
+    function runCounters() {
+      const counters = document.querySelectorAll('.stat-number');
+      counters.forEach(counter => {
+        if (counter.dataset.done === '1') return;
+        counter.dataset.done = '1';
+
+        const target = parseFloat(counter.getAttribute('data-target'));
+        const suffix = counter.getAttribute('data-suffix') || '';
+        const isDecimal = !Number.isInteger(target);
+
+        let current = 0;
+        const steps = 60;
+        const step = target / steps;
+
+        const update = () => {
+          current += step;
+          if (current >= target) {
+            counter.textContent = (isDecimal ? target.toFixed(1) : target) + suffix;
+          } else {
+            counter.textContent = (isDecimal ? current.toFixed(1) : Math.floor(current)) + suffix;
+            requestAnimationFrame(update);
+          }
+        };
+        update();
+      });
+    }
+
+    window.addEventListener('load', runCounters);
+
+    // ============================================================
+    // CHECK MY ADDRESS — GEOLOCATION FEATURE
+    // ============================================================
+    const SERVICE_ZONE = {
+      minLat: 26.95,
+      maxLat: 27.25,
+      minLng: 84.85,
+      maxLng: 85.15,
+      centerLat: 27.1247,
+      centerLng: 84.9900,
+      maxDistanceKm: 25
+    };
+
+    const checkBtn = document.getElementById('checkLocationBtn');
+    const resultBox = document.getElementById('locationResult');
+
+    if (checkBtn) {
+      checkBtn.addEventListener('click', checkMyAddress);
+    }
+
+    function checkMyAddress() {
+      if (!navigator.geolocation) {
+        showResult('error',
+          'Location Not Supported',
+          'Your browser does not support location services. Please call or WhatsApp us to check your area.',
+          null, true);
+        return;
+      }
+      setLoading(true);
+      navigator.geolocation.getCurrentPosition(
+        onLocationSuccess,
+        onLocationError,
+        { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
+      );
+    }
+
+    function setLoading(isLoading) {
+      if (isLoading) {
+        checkBtn.disabled = true;
+        checkBtn.innerHTML = '<i class="fas fa-spinner"></i><span>Checking your location…</span>';
+      } else {
+        checkBtn.disabled = false;
+        checkBtn.innerHTML = '<i class="fas fa-crosshairs"></i><span>Use My Current Location</span>';
+      }
+    }
+
+    function onLocationSuccess(position) {
+      setLoading(false);
+      const lat = position.coords.latitude;
+      const lng = position.coords.longitude;
+      const accuracy = Math.round(position.coords.accuracy);
+
+      const inBoundingBox =
+        lat >= SERVICE_ZONE.minLat &&
+        lat <= SERVICE_ZONE.maxLat &&
+        lng >= SERVICE_ZONE.minLng &&
+        lng <= SERVICE_ZONE.maxLng;
+
+      const distanceKm = haversineKm(lat, lng, SERVICE_ZONE.centerLat, SERVICE_ZONE.centerLng);
+      const coordsHtml = `<div class="coords">📍 ${lat.toFixed(5)}, ${lng.toFixed(5)} (±${accuracy}m)</div>`;
+
+      if (inBoundingBox && distanceKm <= SERVICE_ZONE.maxDistanceKm) {
+        showResult('success',
+          'Great News — You\'re Covered! 🎉',
+          `Your location (${distanceKm.toFixed(1)} km from our hub) is inside our service area. We can install internet, IPTV, or CCTV at your address. Tap below to request a free site visit.`,
+          coordsHtml, false,
+          { label: 'Request Free Site Visit', url: '#', onclick: "switchTab('contact', event)" }
+        );
+      } else {
+        if (distanceKm <= SERVICE_ZONE.maxDistanceKm + 10) {
+          showResult('warning',
+            'Just Outside Our Zone',
+            `You're about ${distanceKm.toFixed(1)} km from our nearest hub. You may be at the edge of coverage — contact us and we'll check manually.`,
+            coordsHtml, false,
+            { label: 'Ask About My Area',
+              url: 'https://wa.me/9779802596081?text=Hello%20Sajilo%20Digital%2C%20I%20am%20located%20just%20outside%20your%20service%20area.%20Can%20you%20check%20if%20you%20can%20cover%20me%3F',
+              external: true }
+          );
+        } else {
+          showResult('warning',
+            'Outside Our Current Coverage',
+            `Your location is approximately ${distanceKm.toFixed(1)} km from our hub — currently outside our service zone. We're expanding, so reach out and we'll let you know when we arrive.`,
+            coordsHtml, false,
+            { label: 'Notify Me When Available',
+              url: 'https://wa.me/9779802596081?text=Hello%20Sajilo%20Digital%2C%20I%20am%20outside%20your%20coverage%20area.%20Please%20notify%20me%20when%20service%20is%20available%20in%20my%20area.',
+              external: true }
+          );
+        }
+      }
+    }
+
+    function onLocationError(error) {
+      setLoading(false);
+      let title = 'Location Unavailable';
+      let message = '';
+      let action = null;
+
+      switch (error.code) {
+        case error.PERMISSION_DENIED:
+          title = 'Location Permission Denied';
+          message = 'You declined location access. You can still contact us directly — we\'ll check your address manually.';
+          action = { label: 'Ask Us to Check Manually',
+            url: 'https://wa.me/9779802596081?text=Hello%20Sajilo%20Digital%2C%20please%20check%20if%20my%20address%20is%20covered.',
+            external: true };
+          break;
+        case error.POSITION_UNAVAILABLE:
+          title = 'Location Not Available';
+          message = 'We couldn\'t determine your location. This can happen indoors or without GPS. Try again or contact us directly.';
+          action = { label: 'Contact Us on WhatsApp',
+            url: 'https://wa.me/9779802596081?text=Hello%20Sajilo%20Digital%2C%20I%20want%20to%20check%20my%20area.',
+            external: true };
+          break;
+        case error.TIMEOUT:
+          title = 'Request Timed Out';
+          message = 'The location request took too long. Please try again or reach out to us on WhatsApp.';
+          action = { label: 'Try Again', url: '#', onclick: 'checkMyAddress()' };
+          break;
+        default:
+          message = 'Something went wrong while getting your location. Please contact us directly.';
+          action = { label: 'Contact Us', url: 'https://wa.me/9779802596081', external: true };
+      }
+      showResult('error', title, message, null, false, action);
+    }
+
+    function showResult(type, title, message, coordsHtml, isError, action) {
+      resultBox.className = 'location-result show ' + type;
+      let actionHtml = '';
+      if (action) {
+        if (action.onclick) {
+          actionHtml = `<a href="${action.url}" class="result-action" onclick="${action.onclick}">
+                          ${action.label} <i class="fas fa-arrow-right"></i>
+                        </a>`;
+        } else if (action.external) {
+          actionHtml = `<a href="${action.url}" target="_blank" rel="noopener" class="result-action">
+                          ${action.label} <i class="fas fa-external-link-alt"></i>
+                        </a>`;
+        } else {
+          actionHtml = `<a href="${action.url}" class="result-action">
+                          ${action.label} <i class="fas fa-arrow-right"></i>
+                        </a>`;
+        }
+      }
+      const iconMap = { success: 'fa-check-circle', warning: 'fa-exclamation-triangle', error: 'fa-times-circle' };
+      resultBox.innerHTML = `
+        <div class="result-head">
+          <i class="fas ${iconMap[type]}"></i>
+          ${title}
+        </div>
+        <div>${message}</div>
+        ${coordsHtml || ''}
+        ${actionHtml}
+      `;
+    }
+
+    function haversineKm(lat1, lng1, lat2, lng2) {
+      const R = 6371;
+      const dLat = (lat2 - lat1) * Math.PI / 180;
+      const dLng = (lng2 - lng1) * Math.PI / 180;
+      const a =
+        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+        Math.sin(dLng / 2) * Math.sin(dLng / 2);
+      const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+      return R * c;
     }
   </script>
 
