@@ -3,18 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sajilo Digital Communication | Internet, IPTV, CCTV & Networking in Bara, Nepal</title>
-  <meta name="description" content="Sajilo Digital Communication provides high-speed internet, IPTV, CCTV installation, internal & external networking in Jeetpur-Simara, Bara, Nepal. Call +977 9802596081.">
+  <title>Sajilo Digital Communication | CCTV, Networking & Security in Bara, Nepal</title>
+  <meta name="description" content="Sajilo Digital Communication provides CCTV installation, internal & external networking in Jeetpur-Simara, Bara, Nepal. Call +977 9802596081.">
 
-  <link rel="icon" type="image/png" href="logo1.jpeg">
+  <!-- Favicon (correct MIME type) -->
+  <link rel="icon" type="image/jpeg" href="logo1.jpeg">
 
-  <meta property="og:title" content="Sajilo Digital Communication | Internet, IPTV, CCTV & Networking">
-  <meta property="og:description" content="Bara's trusted partner for high-speed fiber internet, IPTV, CCTV, and networking.">
-  <meta property="og:image" content="logo1.jpeg">
+  <!-- Open Graph (absolute URL placeholder – replace with your domain) -->
+  <meta property="og:title" content="Sajilo Digital Communication | CCTV, Networking & Security">
+  <meta property="og:description" content="Bara's trusted partner for CCTV, networking, and security systems.">
+  <meta property="og:image" content="https://yourdomain.com/logo1.jpeg">
+  <meta property="og:url" content="https://yourdomain.com/">
   <meta property="og:type" content="website">
 
+  <!-- Canonical -->
+  <link rel="canonical" href="https://yourdomain.com/">
+
+  <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Structured Data: LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Sajilo Digital Communication",
+    "description": "CCTV installation, internal and external networking services in Bara, Nepal.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Jeetpur-Simara-7, Jeetpur Tedha Road",
+      "addressLocality": "Jeetpur-Simara",
+      "addressRegion": "Bara",
+      "addressCountry": "NP"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 27.150722,
+      "longitude": 84.968472
+    },
+    "telephone": "+9779802596081",
+    "email": "sdc2081@gmail.com",
+    "url": "https://yourdomain.com/",
+    "openingHours": "Mo-Su 00:00-23:59",
+    "priceRange": "$$"
+  }
+  </script>
 
   <style>
     :root {
@@ -170,6 +204,10 @@
       box-shadow: var(--shadow); border: 1px solid rgba(0, 168, 255, 0.05);
     }
     .contact-form h2, .contact-info h2 { font-size: 1.8rem; margin-bottom: 25px; }
+    .contact-form label {
+      display: block; font-size: 0.85rem; font-weight: 600;
+      color: var(--text-dark); margin-bottom: 6px;
+    }
     .contact-form input, .contact-form select, .contact-form textarea {
       width: 100%; padding: 14px 16px; margin-bottom: 16px;
       border: 1px solid #cbd5e1; border-radius: 8px; font-family: inherit;
@@ -224,7 +262,6 @@
     }
     .contact-info .info-line .info-text { display: flex; flex-direction: column; gap: 3px; }
 
-    /* Location link — styled as the business name, redirects to Maps */
     .contact-info .location-link {
       color: var(--text-dark);
       font-weight: 600;
@@ -465,9 +502,11 @@
       box-shadow: var(--shadow); overflow: hidden; border: 1px solid rgba(0, 168, 255, 0.06);
     }
     .faq-question {
-      padding: 20px 24px; cursor: pointer; font-weight: 600;
+      width: 100%; padding: 20px 24px; cursor: pointer; font-weight: 600;
       color: var(--text-dark); display: flex; justify-content: space-between;
       align-items: center; gap: 15px; transition: var(--transition);
+      background: none; border: none; font-size: 1rem; font-family: inherit;
+      text-align: left;
     }
     .faq-question:hover { background: rgba(0, 168, 255, 0.04); }
     .faq-question i { color: var(--primary); transition: transform 0.3s ease; }
@@ -477,7 +516,7 @@
       transition: max-height 0.35s ease, padding 0.35s ease;
       padding: 0 24px; color: var(--text-body); font-size: 0.95rem; line-height: 1.7;
     }
-    .faq-item.open .faq-answer { max-height: 300px; padding: 0 24px 22px; }
+    .faq-item.open .faq-answer { max-height: 500px; padding: 0 24px 22px; }
 
     /* ===== FLOATING WHATSAPP ===== */
     .whatsapp-float {
@@ -558,12 +597,12 @@
         <img src="logo1.jpeg" alt="Sajilo Digital Communication Logo">
         <div class="logo-text">
           <span class="company-name">Sajilo Digital Communication</span>
-          <span class="company-tagline">Internet • IPTV • CCTV • Networking</span>
+          <span class="company-tagline">CCTV • Networking • Security</span>
         </div>
       </a>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="#" class="tab-link active" data-tab="home" onclick="switchTab('home', event)">Home</a></li>
+        <li><a href="#" class="tab-link active" data-tab="home" onclick="switchTab('home', event)" aria-current="page">Home</a></li>
         <li><a href="#" class="tab-link" data-tab="services" onclick="switchTab('services', event)">Services</a></li>
         <li><a href="#" class="tab-link" data-tab="why-us" onclick="switchTab('why-us', event)">Why Us</a></li>
         <li><a href="#" class="tab-link" data-tab="about" onclick="switchTab('about', event)">About</a></li>
@@ -582,10 +621,10 @@
       <div id="home" class="tab-content active">
         <section class="hero">
           <div class="hero-content">
-            <h1>Fast. Secure. Connected.</h1>
-            <p>Bara's trusted partner for High-Speed Fiber Internet, IPTV, and Advanced Security Systems. We bring reliable connectivity to your home and business in Jeetpur-Simara and beyond.</p>
+            <h1>Secure. Connected. Protected.</h1>
+            <p>Bara's trusted partner for CCTV, Networking, and Advanced Security Systems. We bring reliable security and connectivity to your home and business in Jeetpur-Simara and beyond.</p>
             <div class="hero-buttons">
-              <a href="#" class="btn btn-accent" onclick="switchTab('contact', event)">Get Internet Today</a>
+              <a href="#" class="btn btn-accent" onclick="switchTab('contact', event)">Get CCTV Today</a>
               <a href="#" class="btn btn-outline" onclick="switchTab('contact', event)" style="color: white; border-color: white;">Request a Quote</a>
             </div>
           </div>
@@ -615,50 +654,50 @@
           <p>Quick answers to what customers ask us most.</p>
 
           <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">
-              How fast can you install internet at my home?
-              <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">For most areas in Jeetpur-Simara, Parsagadhi, and Sakhuwaparsauni, we can complete installation within 24–48 hours of your request. Just call or WhatsApp us at +977 9802596081.</div>
+            <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+              How fast can you install CCTV at my home?
+              <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">For most areas in Jeetpur-Simara, Parsagadhi, and Sakhuwaparsauni, we can complete CCTV installation within 24–48 hours of your request. Just call or WhatsApp us at +977 9802596081.</div>
           </div>
 
           <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">
-              Do you provide IPTV service?
-              <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">Yes! We offer IPTV packages with hundreds of Nepali, Indian, and international channels in HD quality. Bundled with our internet plans at a discounted rate.</div>
+            <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+              Do you provide networking for offices?
+              <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">Yes! We design and set up internal office networks, Wi-Fi routing, structured cabling, and external fiber optic connections for businesses of all sizes.</div>
           </div>
 
           <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">
+            <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
               Do you provide CCTV cameras with mobile viewing?
-              <i class="fas fa-chevron-down"></i>
-            </div>
+              <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
             <div class="faq-answer">Yes. All our CCTV installations come with mobile remote viewing so you can monitor your home or business from anywhere using your smartphone.</div>
           </div>
 
           <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">
+            <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
               Where can I visit in person to buy your services?
-              <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">You can visit our authorized Point of Sale at <strong>Ghimire General tatha Dudh Dairy Pasal</strong>, located at Jeetpur-Simara-7, Jeetpur Tedha Road, Bara. Our friendly staff there can help you sign up for internet or CCTV services.</div>
+              <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">You can visit our authorized Point of Sale at <strong>Ghimire General tatha Dudh Dairy Pasal</strong>, located at Jeetpur-Simara-7, Jeetpur Tedha Road, Bara. Our friendly staff there can help you sign up for CCTV or networking services.</div>
           </div>
 
           <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">
+            <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
               What areas do you serve?
-              <i class="fas fa-chevron-down"></i>
-            </div>
+              <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
             <div class="faq-answer">We serve the entire Jeetpur-Simara Sub-Metropolitan City, Parsagadhi Municipality, and Sakhuwaparsauni Rural Municipality. Check our Service Area tab to check your exact location on the map.</div>
           </div>
 
           <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">
+            <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
               Do you offer maintenance for existing CCTV systems?
-              <i class="fas fa-chevron-down"></i>
-            </div>
+              <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
             <div class="faq-answer">Absolutely. We service and repair CCTV systems even if they were installed by someone else. We also offer routine maintenance contracts for businesses.</div>
           </div>
         </section>
@@ -669,61 +708,37 @@
         <h2 style="text-align: center; margin-bottom: 40px; font-size: 2.2rem;">Our Core Solutions</h2>
         <div class="services-grid">
           <div class="service-card">
-            <i class="fas fa-wifi"></i>
-            <h3>High-Speed Internet Services</h3>
-            <p>Tired of buffering? We provide reliable internet reseller services tailored for homes and businesses in Nepal.</p>
-            <ul>
-              <li><i class="fas fa-check-circle"></i> Home & Enterprise Plans</li>
-              <li><i class="fas fa-check-circle"></i> Unlimited Data Options</li>
-              <li><i class="fas fa-check-circle"></i> 99.9% Uptime Reliability</li>
-            </ul>
-            <a href="#" class="btn btn-primary" onclick="switchTab('contact', event)">View Plans</a>
-          </div>
-
-          <div class="service-card">
-            <i class="fas fa-tv"></i>
-            <h3>IPTV Services</h3>
-            <p>Enjoy hundreds of HD channels with our IPTV service. Nepali, Indian, and international content delivered over your internet connection.</p>
-            <ul>
-              <li><i class="fas fa-check-circle"></i> 300+ HD Channels</li>
-              <li><i class="fas fa-check-circle"></i> Nepali, Indian &amp; International</li>
-              <li><i class="fas fa-check-circle"></i> Bundle with Internet &amp; Save</li>
-            </ul>
-            <a href="#" class="btn btn-primary" onclick="switchTab('contact', event)">Get IPTV</a>
-          </div>
-
-          <div class="service-card">
-            <i class="fas fa-video"></i>
+            <i class="fas fa-video" aria-hidden="true"></i>
             <h3>CCTV & Security Systems</h3>
             <p>Protect what matters most. We supply, install, and maintain HD/IP camera systems with remote viewing capabilities.</p>
             <ul>
-              <li><i class="fas fa-check-circle"></i> HD & IP Camera Setup</li>
-              <li><i class="fas fa-check-circle"></i> Mobile Remote Viewing</li>
-              <li><i class="fas fa-check-circle"></i> Routine Maintenance & Repair</li>
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i> HD & IP Camera Setup</li>
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i> Mobile Remote Viewing</li>
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i> Routine Maintenance & Repair</li>
             </ul>
             <a href="#" class="btn btn-primary" onclick="switchTab('contact', event)">Secure My Property</a>
           </div>
 
           <div class="service-card">
-            <i class="fas fa-network-wired"></i>
+            <i class="fas fa-network-wired" aria-hidden="true"></i>
             <h3>Internal Networking</h3>
             <p>Optimize your office workflow. We design and set up seamless internal networks for maximum productivity.</p>
             <ul>
-              <li><i class="fas fa-check-circle"></i> Office LAN Setup</li>
-              <li><i class="fas fa-check-circle"></i> Wi-Fi Routing & Configuration</li>
-              <li><i class="fas fa-check-circle"></i> Structured Cabling Solutions</li>
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i> Office LAN Setup</li>
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i> Wi-Fi Routing & Configuration</li>
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i> Structured Cabling Solutions</li>
             </ul>
             <a href="#" class="btn btn-primary" onclick="switchTab('contact', event)">Optimize Office</a>
           </div>
 
           <div class="service-card">
-            <i class="fas fa-broadcast-tower"></i>
+            <i class="fas fa-broadcast-tower" aria-hidden="true"></i>
             <h3>External Networking</h3>
             <p>Connecting distances. Expert fiber optic solutions for long-distance data transmission.</p>
             <ul>
-              <li><i class="fas fa-check-circle"></i> Fiber Optic Cable Splicing</li>
-              <li><i class="fas fa-check-circle"></i> Long-Distance Fiber Laying</li>
-              <li><i class="fas fa-check-circle"></i> Network Backbone Setup</li>
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i> Fiber Optic Cable Splicing</li>
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i> Long-Distance Fiber Laying</li>
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i> Network Backbone Setup</li>
             </ul>
             <a href="#" class="btn btn-primary" onclick="switchTab('contact', event)">Consult Expert</a>
           </div>
@@ -735,22 +750,22 @@
         <h2 style="text-align: center; margin-bottom: 40px; font-size: 2.2rem;">Why Choose Us</h2>
         <div class="grid-4">
           <div class="badge">
-            <i class="fas fa-map-marker-alt"></i>
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
             <h3>Fast Local Support</h3>
             <p>We are based in Bara. When you have an issue, we are minutes away, not hours.</p>
           </div>
           <div class="badge">
-            <i class="fas fa-certificate"></i>
+            <i class="fas fa-certificate" aria-hidden="true"></i>
             <h3>Certified Technicians</h3>
             <p>Our team is trained in fiber splicing, networking, and CCTV installation.</p>
           </div>
           <div class="badge">
-            <i class="fas fa-tachometer-alt"></i>
-            <h3>High-Speed Fiber</h3>
-            <p>Experience uninterrupted streaming, gaming, and business operations.</p>
+            <i class="fas fa-shield-alt" aria-hidden="true"></i>
+            <h3>Advanced Security</h3>
+            <p>State-of-the-art CCTV systems with remote monitoring and high-definition clarity.</p>
           </div>
           <div class="badge">
-            <i class="fas fa-clock"></i>
+            <i class="fas fa-clock" aria-hidden="true"></i>
             <h3>24/7 Service Guarantee</h3>
             <p>We monitor our network around the clock so you stay connected.</p>
           </div>
@@ -762,11 +777,11 @@
         <div class="about-grid">
           <div class="about-text">
             <h2>Your Local Technology Partner</h2>
-            <p>Sajilo Digital Communication was founded with a simple mission: to simplify connectivity and security for the people of Bara and surrounding regions. Located in Jeetpur-Simara, we understand the local challenges of connectivity better than anyone else.</p>
-            <p>Whether you are a homeowner looking for secure CCTV or a business requiring a robust fiber backbone, we bridge the gap between you and the technology you need. We don't just sell services; we build long-term relationships based on trust, quality, and rapid service.</p>
+            <p>Sajilo Digital Communication was founded with a simple mission: to simplify security and connectivity for the people of Bara and surrounding regions. Located in Jeetpur-Simara, we understand the local challenges better than anyone else.</p>
+            <p>Whether you are a homeowner looking for secure CCTV or a business requiring a robust network infrastructure, we bridge the gap between you and the technology you need. We don't just sell services; we build long-term relationships based on trust, quality, and rapid service.</p>
           </div>
           <div class="about-image">
-            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80" alt="Technician working on networking equipment">
+            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80" alt="Technician working on networking equipment" loading="lazy">
           </div>
         </div>
       </div>
@@ -775,16 +790,16 @@
       <div id="clients" class="tab-content">
         <div class="section-header">
           <h2>Our Valued Clients</h2>
-          <p>Businesses and institutions across Bara trust Sajilo Digital Communication for reliable connectivity and security.</p>
+          <p>Businesses and institutions across Bara trust Sajilo Digital Communication for reliable security and networking.</p>
         </div>
 
         <div class="clients-grid">
           <div class="client-card">
             <div class="client-header">
-              <div class="client-avatar"><i class="fas fa-store"></i></div>
+              <div class="client-avatar"><i class="fas fa-store" aria-hidden="true"></i></div>
               <div class="client-info">
                 <h3>Anmol Sweets</h3>
-                <div class="client-location"><i class="fas fa-map-marker-alt"></i> Jeetpur, Bara</div>
+                <div class="client-location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Jeetpur, Bara</div>
               </div>
             </div>
             <div class="client-services">
@@ -797,35 +812,35 @@
 
           <div class="client-card">
             <div class="client-header">
-              <div class="client-avatar"><i class="fas fa-hotel"></i></div>
+              <div class="client-avatar"><i class="fas fa-hotel" aria-hidden="true"></i></div>
               <div class="client-info">
                 <h3>Binod Line Hotel</h3>
-                <div class="client-location"><i class="fas fa-map-marker-alt"></i> Jeetpur, Bara</div>
+                <div class="client-location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Jeetpur, Bara</div>
               </div>
             </div>
             <div class="client-services">
-              <span class="client-tag">High-Speed Internet</span>
-              <span class="client-tag green">CCTV</span>
+              <span class="client-tag">CCTV</span>
+              <span class="client-tag green">Networking</span>
             </div>
           </div>
 
           <div class="client-card has-badge">
-            <span class="pos-badge"><i class="fas fa-store-alt"></i> Point of Sale</span>
+            <span class="pos-badge"><i class="fas fa-store-alt" aria-hidden="true"></i> Point of Sale</span>
             <div class="client-header">
-              <div class="client-avatar"><i class="fas fa-cow"></i></div>
+              <div class="client-avatar"><i class="fas fa-cow" aria-hidden="true"></i></div>
               <div class="client-info">
                 <h3>Ghimire General tatha Dudh Dairy Pasal</h3>
                 <div class="client-location">
-                  <i class="fas fa-map-marker-alt"></i>
+                  <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                   Jeetpur-Simara-7, Jeetpur Tedha Road, Bara, Nepal
                 </div>
               </div>
             </div>
             <div class="client-services">
               <span class="client-tag">CCTV</span>
-              <span class="client-tag green">Internet Service</span>
+              <span class="client-tag green">Networking</span>
               <span class="client-tag outlet">
-                <i class="fas fa-store-alt"></i>Authorized Point of Sale
+                <i class="fas fa-store-alt" aria-hidden="true"></i>Authorized Point of Sale
               </span>
             </div>
           </div>
@@ -838,7 +853,7 @@
           <p>Real feedback from real customers in Bara.</p>
           <div class="testimonial-grid">
             <div class="testimonial-card">
-              <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <div class="stars"><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i></div>
               <p class="quote">"Excellent CCTV installation service. The clarity is superb and we can monitor everything from our phones. Very professional team."</p>
               <div class="testimonial-author">
                 <div class="avatar">S</div>
@@ -849,8 +864,8 @@
               </div>
             </div>
             <div class="testimonial-card">
-              <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-              <p class="quote">"Our guests always complained about slow WiFi. Since switching, not a single complaint. Fast, reliable, and the support is quick."</p>
+              <div class="stars"><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i></div>
+              <p class="quote">"Our office network was always dropping. Since Sajilo Digital set up our internal networking, we haven't had a single issue. Fast and reliable."</p>
               <div class="testimonial-author">
                 <div class="avatar">H</div>
                 <div>
@@ -860,7 +875,7 @@
               </div>
             </div>
             <div class="testimonial-card">
-              <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+              <div class="stars"><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star-half-alt" aria-hidden="true"></i></div>
               <p class="quote">"Needed urgent fiber splicing for our office. They arrived same day and fixed it in hours. Highly recommend for any business in Bara."</p>
               <div class="testimonial-author">
                 <div class="avatar">R</div>
@@ -887,21 +902,21 @@
             <p style="font-size: 0.95rem;">We provide rapid response and high-quality installation services across these municipalities:</p>
             <ul class="area-list">
               <li>
-                <i class="fas fa-map-pin"></i>
+                <i class="fas fa-map-pin" aria-hidden="true"></i>
                 <div class="area-text">
                   <span class="area-name">Jeetpur-Simara</span>
                   <span class="area-type">Sub-Metropolitan City · Full Coverage</span>
                 </div>
               </li>
               <li>
-                <i class="fas fa-map-pin"></i>
+                <i class="fas fa-map-pin" aria-hidden="true"></i>
                 <div class="area-text">
                   <span class="area-name">Parsagadhi Municipality</span>
                   <span class="area-type">Municipality · Full Coverage</span>
                 </div>
               </li>
               <li>
-                <i class="fas fa-map-pin"></i>
+                <i class="fas fa-map-pin" aria-hidden="true"></i>
                 <div class="area-text">
                   <span class="area-name">Sakhuwaparsauni</span>
                   <span class="area-type">Rural Municipality · Full Coverage</span>
@@ -911,14 +926,14 @@
 
             <div class="check-address-box">
               <div class="box-title">
-                <i class="fas fa-location-crosshairs"></i>
+                <i class="fas fa-location-crosshairs" aria-hidden="true"></i>
                 Check If We Cover Your Area
               </div>
               <div class="box-subtitle">
                 Share your location and we'll instantly tell you if you're inside our service zone.
               </div>
               <button type="button" class="check-btn" id="checkLocationBtn">
-                <i class="fas fa-crosshairs"></i>
+                <i class="fas fa-crosshairs" aria-hidden="true"></i>
                 <span>Use My Current Location</span>
               </button>
               <div class="location-result" id="locationResult"></div>
@@ -952,18 +967,20 @@
             <form action="https://formsubmit.co/sdc2081@gmail.com" method="POST">
               <input type="hidden" name="_captcha" value="false">
               <input type="hidden" name="_subject" value="New Service Request from SDC Website">
-              <input type="text" name="name" placeholder="Your Name" required>
-              <input type="tel" name="phone" placeholder="Phone Number" required>
-              <select name="service" required>
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Your Name" required>
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+              <label for="service">Select Service</label>
+              <select id="service" name="service" required>
                 <option value="">Select Service</option>
-                <option value="High-Speed Internet">High-Speed Internet</option>
-                <option value="IPTV Services">IPTV Services</option>
                 <option value="CCTV & Security Systems">CCTV & Security Systems</option>
                 <option value="Internal Networking">Internal Networking</option>
                 <option value="External Networking">External Networking</option>
                 <option value="Other">Other</option>
               </select>
-              <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
               <button type="submit" class="btn btn-primary">Send Request</button>
             </form>
           </div>
@@ -971,56 +988,56 @@
           <div class="contact-info">
             <h2>Get In Touch</h2>
 
-            <!-- ===== LOCATION (UPDATED) ===== -->
+            <!-- ===== LOCATION ===== -->
             <p class="info-line">
-              <i class="fas fa-map-marker-alt"></i>
+              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
               <span class="info-text">
                 <a href="https://maps.google.com/?q=27.150722,84.968472" target="_blank" rel="noopener" class="location-link">
                   Sajilo Digital Communication
                 </a>
                 <a href="https://maps.google.com/?q=27.150722,84.968472" target="_blank" rel="noopener" class="maps-sublink">
-                  <i class="fas fa-external-link-alt"></i> View on Google Maps
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i> View on Google Maps
                 </a>
               </span>
             </p>
 
-            <p class="info-line"><i class="fas fa-envelope"></i> sdc2081@gmail.com</p>
+            <p class="info-line"><i class="fas fa-envelope" aria-hidden="true"></i> sdc2081@gmail.com</p>
 
             <div class="contact-action-list">
               <a href="https://m.me/61591655874726" target="_blank" rel="noopener" class="contact-action fb">
-                <span class="action-icon"><i class="fab fa-facebook-f"></i></span>
+                <span class="action-icon"><i class="fab fa-facebook-f" aria-hidden="true"></i></span>
                 <span class="action-text">
                   <span class="label">Connect on Facebook</span>
                   <span class="value">Send us a message</span>
                 </span>
-                <i class="fas fa-arrow-right action-arrow"></i>
+                <i class="fas fa-arrow-right action-arrow" aria-hidden="true"></i>
               </a>
 
               <a href="https://wa.me/9779802596081?text=Hello%20Sajilo%20Digital%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank" rel="noopener" class="contact-action wa">
-                <span class="action-icon"><i class="fab fa-whatsapp"></i></span>
+                <span class="action-icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></span>
                 <span class="action-text">
                   <span class="label">Chat on WhatsApp</span>
                   <span class="value">+977 9802596081</span>
                 </span>
-                <i class="fas fa-arrow-right action-arrow"></i>
+                <i class="fas fa-arrow-right action-arrow" aria-hidden="true"></i>
               </a>
 
               <a href="tel:+9779802596081" class="contact-action call">
-                <span class="action-icon"><i class="fas fa-phone"></i></span>
+                <span class="action-icon"><i class="fas fa-phone" aria-hidden="true"></i></span>
                 <span class="action-text">
                   <span class="label">Call Us Now</span>
                   <span class="value">+977 9802596081</span>
                 </span>
-                <i class="fas fa-arrow-right action-arrow"></i>
+                <i class="fas fa-arrow-right action-arrow" aria-hidden="true"></i>
               </a>
 
               <a href="mailto:sdc2081@gmail.com" class="contact-action email">
-                <span class="action-icon"><i class="fas fa-envelope"></i></span>
+                <span class="action-icon"><i class="fas fa-envelope" aria-hidden="true"></i></span>
                 <span class="action-text">
                   <span class="label">Send an Email</span>
                   <span class="value">sdc2081@gmail.com</span>
                 </span>
-                <i class="fas fa-arrow-right action-arrow"></i>
+                <i class="fas fa-arrow-right action-arrow" aria-hidden="true"></i>
               </a>
             </div>
           </div>
@@ -1033,24 +1050,31 @@
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container">
-      <p>© 2024 Sajilo Digital Communication. All rights reserved.</p>
+      <p>© <span id="year"></span> Sajilo Digital Communication. All rights reserved.</p>
       <p>Simplifying Connectivity &amp; Security.</p>
     </div>
   </footer>
 
   <!-- ===== FLOATING WHATSAPP ===== -->
   <a href="https://wa.me/9779802596081?text=Hello%20Sajilo%20Digital%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
   </a>
 
   <!-- ===== SCRIPTS ===== -->
   <script>
+    // Dynamic copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
     function switchTab(tabId, event) {
       if (event) event.preventDefault();
 
       document.querySelectorAll('.tab-link').forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('data-tab') === tabId) link.classList.add('active');
+        link.removeAttribute('aria-current');
+        if (link.getAttribute('data-tab') === tabId) {
+          link.classList.add('active');
+          link.setAttribute('aria-current', 'page');
+        }
       });
 
       document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
@@ -1065,7 +1089,8 @@
 
     function toggleFaq(el) {
       const item = el.parentElement;
-      item.classList.toggle('open');
+      const isOpen = item.classList.toggle('open');
+      el.setAttribute('aria-expanded', isOpen);
     }
 
     function runCounters() {
@@ -1137,10 +1162,10 @@
     function setLoading(isLoading) {
       if (isLoading) {
         checkBtn.disabled = true;
-        checkBtn.innerHTML = '<i class="fas fa-spinner"></i><span>Checking your location…</span>';
+        checkBtn.innerHTML = '<i class="fas fa-spinner" aria-hidden="true"></i><span>Checking your location…</span>';
       } else {
         checkBtn.disabled = false;
-        checkBtn.innerHTML = '<i class="fas fa-crosshairs"></i><span>Use My Current Location</span>';
+        checkBtn.innerHTML = '<i class="fas fa-crosshairs" aria-hidden="true"></i><span>Use My Current Location</span>';
       }
     }
 
@@ -1162,9 +1187,9 @@
       if (inBoundingBox && distanceKm <= SERVICE_ZONE.maxDistanceKm) {
         showResult('success',
           'Great News — You\'re Covered! 🎉',
-          `Your location (${distanceKm.toFixed(1)} km from our office) is inside our service area. We can install internet, IPTV, or CCTV at your address. Tap below to request a free site visit.`,
+          `Your location (${distanceKm.toFixed(1)} km from our office) is inside our service area. We can install CCTV or networking at your address. Tap below to request a free site visit.`,
           coordsHtml, false,
-          { label: 'Request Free Site Visit', url: '#', onclick: "switchTab('contact', event)" }
+          { label: 'Request Free Site Visit', url: '#', onclick: "switchTab('contact', event); return false;" }
         );
       } else {
         if (distanceKm <= SERVICE_ZONE.maxDistanceKm + 10) {
@@ -1213,7 +1238,7 @@
         case error.TIMEOUT:
           title = 'Request Timed Out';
           message = 'The location request took too long. Please try again or reach out to us on WhatsApp.';
-          action = { label: 'Try Again', url: '#', onclick: 'checkMyAddress()' };
+          action = { label: 'Try Again', url: '#', onclick: 'checkMyAddress(); return false;' };
           break;
         default:
           message = 'Something went wrong while getting your location. Please contact us directly.';
@@ -1228,22 +1253,22 @@
       if (action) {
         if (action.onclick) {
           actionHtml = `<a href="${action.url}" class="result-action" onclick="${action.onclick}">
-                          ${action.label} <i class="fas fa-arrow-right"></i>
+                          ${action.label} <i class="fas fa-arrow-right" aria-hidden="true"></i>
                         </a>`;
         } else if (action.external) {
           actionHtml = `<a href="${action.url}" target="_blank" rel="noopener" class="result-action">
-                          ${action.label} <i class="fas fa-external-link-alt"></i>
+                          ${action.label} <i class="fas fa-external-link-alt" aria-hidden="true"></i>
                         </a>`;
         } else {
           actionHtml = `<a href="${action.url}" class="result-action">
-                          ${action.label} <i class="fas fa-arrow-right"></i>
+                          ${action.label} <i class="fas fa-arrow-right" aria-hidden="true"></i>
                         </a>`;
         }
       }
       const iconMap = { success: 'fa-check-circle', warning: 'fa-exclamation-triangle', error: 'fa-times-circle' };
       resultBox.innerHTML = `
         <div class="result-head">
-          <i class="fas ${iconMap[type]}"></i>
+          <i class="fas ${iconMap[type]}" aria-hidden="true"></i>
           ${title}
         </div>
         <div>${message}</div>
